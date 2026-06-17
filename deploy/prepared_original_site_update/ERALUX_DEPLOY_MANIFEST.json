@@ -1,0 +1,7 @@
+{
+  "status": "prepared_not_published",
+  "do_not_upload_without_confirmation": true,
+  "telegram": "not added: no verified URL",
+  "cms": "public audit indicates static HTML, not Joomla",
+  "ftp_backup": "not completed in this session without using private credentials"
+}

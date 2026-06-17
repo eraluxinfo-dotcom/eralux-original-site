@@ -1,0 +1,15 @@
+.env
+.env.*
+*.local
+node_modules/
+*.log
+__pycache__/
+*.pyc
+backup/
+database/
+*.sql
+*.zip
+deploy/ACCESS_PRIVATE*
+deploy/*password*
+deploy/*secret*
+configuration.php

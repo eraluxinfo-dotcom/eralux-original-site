@@ -1,0 +1,120 @@
+
+
+/* ERALUX prepared multilingual/photo update */
+.lang-switcher{display:flex;gap:8px;align-items:center;margin-left:18px}.lang-switcher a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:32px;border:1px solid rgba(255,255,255,.5);border-radius:4px;color:#fff;text-decoration:none;font-weight:700;font-size:13px;background:rgba(0,0,0,.18)}.lang-switcher a.is-active,.lang-switcher a:hover{background:#ed5565;border-color:#ed5565}.header__content{gap:14px}.eralux-floating{position:fixed;right:18px;bottom:28px;z-index:90;display:flex;flex-direction:column;gap:10px}.eralux-floating a,.eralux-floating button{width:48px;height:48px;border:0;border-radius:6px;background:#ed5565;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.22);cursor:pointer}.eralux-floating__top{opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s}.eralux-floating__top.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}.eralux-gallery-meta{display:none}.portfolio__filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px auto 22px;max-width:980px}.portfolio__filters button{border:1px solid rgba(163,173,193,.45);background:#fff;color:#283246;border-radius:4px;padding:9px 13px;cursor:pointer;font-weight:700}.portfolio__filters button.is-active,.portfolio__filters button:hover{background:#ed5565;color:#fff;border-color:#ed5565}.case{position:relative;overflow:hidden}.case__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,32,.08),rgba(10,18,32,.86));color:#fff;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:18px;opacity:0;transition:opacity .22s;z-index:3}.case:hover .case__overlay,.case.is-open .case__overlay{opacity:1}.case__overlay h3{margin:0;font-size:18px;line-height:1.2;color:#fff}.case__overlay p{margin:0;font-size:13px;line-height:1.45;color:#fff}.case__overlay-actions{display:flex;gap:8px;flex-wrap:wrap}.case__overlay-actions a{background:#ed5565;color:#fff;text-decoration:none;border-radius:4px;padding:8px 10px;font-weight:700;font-size:13px}.case__overlay-actions a:last-child{background:#6f42c1}.hero{background-image:linear-gradient(90deg,rgba(8,13,24,.68),rgba(8,13,24,.18)),url('img/eralux/eralux-hero-ceiling.jpg');background-size:cover;background-position:center}.hero__overtitle,.hero__title,.hero__intro{text-shadow:0 2px 16px rgba(0,0,0,.35)}@media(max-width:767px){.header__content{flex-wrap:wrap}.lang-switcher{order:4;width:100%;justify-content:center;margin:4px 0 0}.eralux-floating{right:12px;bottom:18px}.eralux-floating a,.eralux-floating button{width:44px;height:44px}.case__overlay{opacity:1;position:absolute;transform:translateY(calc(100% - 52px));transition:transform .22s}.case.is-open .case__overlay{transform:translateY(0)}}
+
+.eralux-palette{background:#f7f8fa;padding-top:48px;padding-bottom:48px}.eralux-palette__head{text-align:center;max-width:760px;margin:0 auto 22px}.eralux-palette__head p{margin:8px 0 0;color:#566070;font-size:18px}.eralux-palette__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.eralux-palette-card{position:relative;min-height:154px;background:#fff;border:1px solid rgba(34,43,59,.1);border-radius:8px;padding:14px;overflow:hidden;box-shadow:0 10px 26px rgba(21,30,45,.08);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.eralux-palette-card:before{content:"";position:absolute;inset:auto -20% -42px -20%;height:94px;background:radial-gradient(circle at 50% 0,var(--swatch),rgba(255,255,255,0));opacity:.5;transition:opacity .2s ease}.eralux-palette-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(21,30,45,.16);border-color:rgba(237,85,101,.35)}.eralux-palette-card:hover:before{opacity:.85}.eralux-palette-card__sample{display:block;width:100%;height:58px;border-radius:6px;background:linear-gradient(135deg,rgba(255,255,255,.42),rgba(255,255,255,0)),var(--swatch);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),0 10px 24px rgba(0,0,0,.08);margin-bottom:12px}.eralux-palette-card strong{display:block;color:#202a3b;font-size:16px;line-height:1.2;margin-bottom:6px}.eralux-palette-card small{display:block;color:#ed5565;font-weight:800;font-size:13px;line-height:1.25;margin-bottom:6px}.eralux-palette-card em{display:block;color:#6b7280;font-style:normal;font-size:12px;line-height:1.35}.eralux-palette__note{max-width:840px;margin:18px auto 0;text-align:center;color:#697386;font-size:14px;line-height:1.5}@media(max-width:980px){.eralux-palette__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.eralux-palette{padding-top:34px;padding-bottom:34px}.eralux-palette__grid{grid-template-columns:1fr}.eralux-palette-card{min-height:132px}.eralux-palette-card__sample{height:48px}}
+.eralux-palette,.new_catalog{scroll-margin-top:92px}
+
+/* ERALUX design fix pass */
+.header{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(14px);box-shadow:0 8px 28px rgba(15,23,42,.08)}
+.header__content{max-width:1180px;margin:0 auto;min-height:76px;padding:10px 22px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:22px!important}
+.header .logo{display:flex!important;align-items:center;min-width:132px;text-decoration:none}
+.header .logo:after{content:"ERALUX";font-size:22px;line-height:1;font-weight:900;letter-spacing:.08em;color:#20242d}
+.header__feedbacks{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:14px!important;min-width:330px!important;margin:0!important}
+.header__phone{display:inline-flex!important;align-items:center;white-space:nowrap!important;width:auto!important;min-width:max-content!important;color:#202a35!important;font-size:16px!important;line-height:1!important;font-weight:800!important;text-decoration:none!important;padding:9px 12px;border-radius:999px;background:#f4f6f8;border:1px solid rgba(15,23,42,.08)}
+.lang-switcher{display:flex!important;gap:8px!important;align-items:center!important;margin-left:0!important}
+.lang-switcher a{min-width:42px!important;height:38px!important;border-radius:999px!important;border:1px solid rgba(15,23,42,.1)!important;background:#f3f5f7!important;color:#4b5563!important;box-shadow:none!important;font-size:13px!important;transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}
+.lang-switcher a.is-active{background:#ed5565!important;border-color:#ed5565!important;color:#fff!important;box-shadow:0 10px 24px rgba(237,85,101,.24)!important}
+.lang-switcher a:hover{transform:translateY(-1px);background:#fff!important;border-color:rgba(237,85,101,.45)!important;color:#ed5565!important}
+.lang-switcher a.is-active:hover{background:#ed5565!important;color:#fff!important}
+.main{overflow:hidden}.section{padding-top:72px!important;padding-bottom:72px!important}.hero{padding-top:78px}
+.benefits-section{padding-top:70px!important;padding-bottom:74px!important;background:linear-gradient(180deg,#fff,#f7f8fb)}
+.benefits-section__head{text-align:center;max-width:780px;margin:0 auto 28px}
+.benefits-section__head h2{margin-bottom:12px!important}
+.benefits-section__head p{margin:0;color:#657083;font-size:19px;line-height:1.45}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.benefit-card{min-height:238px;padding:26px;border-radius:22px;background:#fff;border:1px solid rgba(15,23,42,.08);box-shadow:0 18px 45px rgba(15,23,42,.08);display:flex;flex-direction:column;align-items:flex-start;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.benefit-card:hover{transform:translateY(-4px);box-shadow:0 24px 58px rgba(15,23,42,.13);border-color:rgba(237,85,101,.28)}
+.benefit-card__icon{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff1f3,#eef5ff);color:#ed5565;margin-bottom:18px}
+.benefit-card__icon svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.benefit-card h3{margin:0 0 10px;color:#202a3b;font-size:22px;line-height:1.18;font-weight:900}
+.benefit-card p{margin:0;color:#5f6978;font-size:16px;line-height:1.55}
+.eralux-floating{right:20px!important;bottom:28px!important;gap:9px!important}
+.eralux-floating__btn{width:48px!important;height:48px!important;border-radius:14px!important;background:#fff!important;color:#202a3b!important;border:1px solid rgba(15,23,42,.1)!important;box-shadow:0 14px 34px rgba(15,23,42,.18)!important;font-size:12px!important;letter-spacing:.04em;transition:transform .18s ease,background .18s ease,color .18s ease!important}
+.eralux-floating__btn:hover{transform:translateY(-2px);background:#ed5565!important;color:#fff!important}
+.eralux-floating__btn_viber{background:#7c3aed!important;color:#fff!important;border-color:#7c3aed!important}
+.eralux-floating__btn_tg[data-disabled="true"]{opacity:.45;pointer-events:none}
+.eralux-floating__top{background:#202a3b!important;color:#fff!important}
+@media(max-width:980px){.header__content{gap:12px!important}.header .logo{min-width:112px}.header .logo:after{font-size:18px}.header__feedbacks{min-width:280px!important;gap:8px!important}.header__phone{font-size:14px!important;padding:8px 9px!important}.benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding-top:60px!important;padding-bottom:60px!important}}
+@media(max-width:760px){.header__feedbacks{display:none!important}}
+@media(max-width:640px){.header__content{min-height:66px;padding:8px 12px!important}.header .logo{min-width:auto}.header .logo:after{font-size:16px}.lang-switcher{margin-left:auto!important}.lang-switcher a{min-width:38px!important;height:34px!important}.hero{padding-top:66px}.benefits-section{padding-top:50px!important;padding-bottom:54px!important}.benefits-grid{grid-template-columns:1fr;gap:16px}.benefit-card{min-height:auto;padding:22px;border-radius:18px}.benefit-card h3{font-size:20px}.benefits-section__head p{font-size:16px}.eralux-floating{right:14px!important;bottom:22px!important}.eralux-floating__btn{width:44px!important;height:44px!important;border-radius:13px!important}}
+
+/* Real palette images with catalog numbers only */
+.eralux-palette{background:#fff!important}
+.eralux-palette__grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important}
+.eralux-palette-card{min-height:0!important;padding:18px!important;border-radius:18px!important;background:#fff!important;border:1px solid rgba(15,23,42,.08)!important;box-shadow:0 18px 45px rgba(15,23,42,.08)!important}
+.eralux-palette-card:before{display:none!important}
+.eralux-palette-card__image{display:flex;width:100%;height:380px;align-items:center;justify-content:center;background:#f8fafc;border-radius:14px;overflow:hidden;border:1px solid rgba(15,23,42,.06);margin-bottom:14px}
+.eralux-palette-card__image img{width:100%;height:100%;object-fit:contain;display:block}
+.eralux-palette-card strong{font-size:18px!important;margin-bottom:8px!important}
+.eralux-palette-card small{font-size:14px!important;line-height:1.55!important;color:#303847!important;font-weight:800!important}
+@media(max-width:980px){.eralux-palette__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.eralux-palette-card__image{height:340px}}
+@media(max-width:560px){.eralux-palette__grid{grid-template-columns:1fr!important}.eralux-palette-card__image{height:420px}.eralux-palette-card{padding:14px!important}}
+
+/* Individual numbered palette cards */
+.eralux-palette__grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))!important;gap:18px!important}
+.eralux-palette-card{padding:0!important;border-radius:18px!important;overflow:hidden!important;background:#fff!important;border:1px solid rgba(15,23,42,.08)!important;box-shadow:0 12px 32px rgba(15,23,42,.08)!important;transition:transform .25s ease,box-shadow .25s ease!important}
+.eralux-palette-card:hover{transform:translateY(-4px)!important;box-shadow:0 18px 44px rgba(15,23,42,.14)!important}
+.eralux-palette-card__image{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;margin:0!important;border:0!important;border-radius:0!important;background:#f8fafc!important;overflow:hidden!important}
+.eralux-palette-card__image img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+.palette-number{padding:14px 12px;text-align:center;font-weight:900;font-size:18px;line-height:1.2;color:#202a3b;background:#fff}
+.eralux-palette__note{margin-top:22px!important}
+@media(min-width:1180px){.eralux-palette__grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
+@media(max-width:760px){.eralux-palette__grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}.palette-number{font-size:16px;padding:12px 8px}}
+@media(max-width:430px){.eralux-palette__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}.eralux-palette-card{border-radius:15px!important}}
+
+/* Compact premium palette pass */
+.eralux-palette{padding-top:72px!important;padding-bottom:72px!important;background:#f8fafc!important}
+.eralux-palette.wrapper{width:100%!important;max-width:1160px!important;min-width:0!important;box-sizing:border-box!important}
+.eralux-palette,.eralux-palette *{font-family:Inter,Arial,Helvetica,sans-serif!important}
+.eralux-palette__head{max-width:700px!important;margin:0 auto 26px!important}
+.eralux-palette__head h2{margin-bottom:10px!important;color:#111827!important;font-family:Inter,Arial,Helvetica,sans-serif!important}
+.eralux-palette__head .title-dec:before,.eralux-palette__head .title-dec:after{display:none!important}
+.eralux-palette__head p{font-size:17px!important;line-height:1.45!important;color:#64748b!important}
+.eralux-palette__grid{display:grid!important;width:100%!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:14px!important;align-items:start!important;box-sizing:border-box!important}
+.eralux-palette-card{max-width:160px!important;width:100%!important;min-width:0!important;justify-self:center!important;background:#fff!important;border:1px solid rgba(15,23,42,.08)!important;border-radius:16px!important;overflow:hidden!important;box-shadow:0 8px 22px rgba(15,23,42,.07)!important;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important;cursor:pointer!important}
+.eralux-palette-card:hover{transform:translateY(-4px) scale(1.04)!important;box-shadow:0 16px 36px rgba(15,23,42,.14)!important;border-color:rgba(245,158,11,.35)!important;z-index:3!important}
+.eralux-palette-card__image{width:100%!important;aspect-ratio:1.35/1!important;display:block!important;background:#f8fafc!important;overflow:hidden!important}
+.eralux-palette-card__image img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;transition:transform .22s ease!important}
+.eralux-palette-card:hover .eralux-palette-card__image img{transform:scale(1.035)!important}
+.palette-card-body{padding:10px 10px 12px!important;background:#fff!important}
+.palette-number{display:block!important;padding:0!important;margin:0 0 4px!important;text-align:left!important;font-size:16px!important;font-weight:900!important;line-height:1.2!important;color:#111827!important;background:transparent!important}
+.palette-description{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:11.5px!important;line-height:1.35!important;color:#64748b!important;min-height:15px!important}
+.eralux-palette__note{max-width:820px!important;margin:18px auto 0!important;text-align:center!important;font-size:12.5px!important;line-height:1.45!important;color:#758195!important}
+.eralux-palette__actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.eralux-palette__actions a{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:999px;background:#ed5565;color:#fff;text-decoration:none;font-weight:800;font-size:13px;box-shadow:0 10px 24px rgba(237,85,101,.22)}
+.eralux-palette__actions a:last-child{background:#7c3aed;box-shadow:0 10px 24px rgba(124,58,237,.2)}
+@media(max-width:1100px){.eralux-palette__grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}.eralux-palette-card{max-width:170px!important}}
+@media(max-width:640px){.eralux-palette{padding:56px 10px!important}.eralux-palette.wrapper{max-width:100%!important;padding-left:10px!important;padding-right:10px!important}.eralux-palette__head{max-width:100%!important}.eralux-palette__head p{font-size:15px!important;overflow-wrap:normal!important}.eralux-palette__grid{grid-template-columns:repeat(2,calc((100vw - 30px)/2))!important;justify-content:center!important;gap:10px!important}.eralux-palette-card{width:calc((100vw - 30px)/2)!important;max-width:none!important;border-radius:14px!important}.palette-card-body{padding:9px 9px 10px!important}.palette-number{font-size:15px!important}.palette-description{-webkit-line-clamp:2!important;font-size:11px!important;min-height:30px!important}.eralux-palette__actions a{height:38px;padding:0 14px}}
+.palette-modal{position:fixed;inset:0;z-index:160;display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s ease}
+.palette-modal[aria-hidden="false"]{opacity:1;visibility:visible;pointer-events:auto}
+.palette-modal__backdrop{position:absolute;inset:0;background:rgba(15,23,42,.54);backdrop-filter:blur(7px)}
+.palette-modal__dialog{position:relative;width:min(420px,100%);overflow:hidden;border-radius:22px;background:#fff;border:1px solid rgba(255,255,255,.55);box-shadow:0 28px 80px rgba(15,23,42,.34);transform:translateY(12px) scale(.98);transition:transform .2s ease}
+.palette-modal[aria-hidden="false"] .palette-modal__dialog{transform:translateY(0) scale(1)}
+.palette-modal__close{position:absolute;top:12px;right:12px;z-index:2;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#111827;font-size:24px;line-height:1;box-shadow:0 10px 24px rgba(15,23,42,.18);cursor:pointer}
+.palette-modal__image{width:100%;aspect-ratio:1.55/1;object-fit:cover;display:block;background:#f8fafc}
+.palette-modal__body{padding:18px 20px 20px}
+.palette-modal__number{display:block;margin:0 0 6px;color:#111827;font-size:24px;line-height:1.1;font-weight:900}
+.palette-modal__description{margin:0;color:#64748b;font-size:14px;line-height:1.45}
+.palette-modal__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.palette-modal__actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border-radius:999px;background:#ed5565;color:#fff;text-decoration:none;font-weight:800;font-size:13px;box-shadow:0 10px 24px rgba(237,85,101,.22)}
+.palette-modal__actions a:last-child{background:#7c3aed;box-shadow:0 10px 24px rgba(124,58,237,.2)}
+.palette-modal-open{overflow:hidden}
+@media(max-width:640px){.palette-modal{padding:14px}.palette-modal__dialog{border-radius:18px}.palette-modal__number{font-size:22px}.palette-modal__actions a{flex:1;min-width:130px}}
+
+/* Rendered showroom palette swatches */
+.eralux-palette-card{isolation:isolate!important}
+.palette-swatch{position:relative!important;display:block!important;width:100%!important;aspect-ratio:1.35/1!important;padding:0!important;border:0!important;border-radius:0!important;overflow:hidden!important;background:var(--swatch-base)!important;cursor:pointer!important}
+.palette-swatch-surface{position:absolute!important;inset:0!important;display:block!important;background:linear-gradient(145deg,var(--swatch-highlight),var(--swatch-base) 34%,var(--swatch-shadow) 118%)!important}
+.palette-card--matte .palette-swatch-surface,.palette-modal__swatch.palette-card--matte .palette-swatch-surface{background:radial-gradient(circle at 18% 12%,rgba(255,255,255,.20),rgba(255,255,255,0) 34%),linear-gradient(145deg,var(--swatch-highlight),var(--swatch-base) 42%,var(--swatch-shadow) 120%)!important}
+.palette-card--matte .palette-swatch-surface:after,.palette-modal__swatch.palette-card--matte .palette-swatch-surface:after{content:"";position:absolute;inset:0;opacity:.12;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 1px,rgba(255,255,255,0) 1px 5px)}
+.palette-card--glossy .palette-swatch-surface,.palette-modal__swatch.palette-card--glossy .palette-swatch-surface{background:radial-gradient(ellipse at 28% 8%,rgba(255,255,255,.54),rgba(255,255,255,0) 36%),linear-gradient(145deg,var(--swatch-highlight),var(--swatch-base) 38%,var(--swatch-shadow) 120%)!important}
+.palette-card--glossy .palette-swatch-surface:before,.palette-modal__swatch.palette-card--glossy .palette-swatch-surface:before{content:"";position:absolute;left:-24%;right:-24%;top:12%;height:34%;transform:rotate(-10deg);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.50),rgba(255,255,255,.12) 48%,rgba(255,255,255,0));filter:blur(.2px)}
+.palette-card--glossy .palette-swatch-surface:after,.palette-modal__swatch.palette-card--glossy .palette-swatch-surface:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.18),rgba(255,255,255,0));transform:translateX(-125%) skewX(-16deg);transition:transform .55s ease}
+.eralux-palette-card:hover .palette-swatch-surface:after{transform:translateX(125%) skewX(-16deg)}
+.palette-finish-badge{position:absolute!important;left:8px!important;top:8px!important;z-index:2!important;display:inline-flex!important;align-items:center!important;height:22px!important;padding:0 8px!important;border-radius:999px!important;background:rgba(255,255,255,.76)!important;color:#111827!important;font-size:10px!important;line-height:1!important;font-weight:900!important;text-transform:uppercase!important;letter-spacing:.04em!important;box-shadow:0 6px 18px rgba(15,23,42,.14)!important;backdrop-filter:blur(8px)}
+.palette-modal__swatch{position:relative;width:100%;aspect-ratio:1.55/1;overflow:hidden;background:var(--swatch-base,#c8c3b8);display:block}
+.palette-modal__swatch .palette-finish-badge{left:16px!important;top:16px!important;height:28px!important;padding:0 11px!important;font-size:11px!important}
+.palette-modal__swatch .palette-swatch-surface{position:absolute!important;inset:0!important}
+@media(max-width:640px){.palette-swatch{aspect-ratio:1.18/1!important}.palette-finish-badge{height:20px!important;padding:0 7px!important;font-size:9px!important}.palette-modal__swatch{aspect-ratio:1.2/1}}
