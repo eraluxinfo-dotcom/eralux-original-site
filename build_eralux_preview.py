@@ -143,6 +143,159 @@ T = {
 
 filter_keys = ["all", "light-lines", "shadow", "floating", "curtain", "led", "bedroom", "bathroom", "hallway"]
 
+price_content = {
+    "ru": {
+        "title": "Актуальные цены",
+        "subtitle": "Ориентировочная стоимость. Точная цена рассчитывается после замера.",
+        "note": "Цены ориентировочные. Финальная стоимость зависит от площади, количества углов, выбранного полотна, освещения и сложности монтажа.",
+        "items": [
+            ("Теневой потолок", "от 10 у.е./м²", "Чистый контур без видимого декоративного багета."),
+            ("Парящий потолок", "от 10 у.е./м²", "Мягкая подсветка по периметру и эффект лёгкости."),
+            ("Световые линии", "от 35 у.е./м²", "Геометрия света для современных интерьеров."),
+            ("Фотопечать", "от 25 у.е./м²", "Индивидуальное изображение на полотне."),
+            ("Apply-потолки", "от 25 у.е./м²", "Сложные декоративные решения и комбинации фактур."),
+            ("Звёздное небо", "от 35 у.е./м²", "Атмосферный световой сценарий для комнаты."),
+            ("Карнизы", "от 25 у.е.", "Аккуратные решения для штор и ниш."),
+        ],
+    },
+    "uk": {
+        "title": "Актуальні ціни",
+        "subtitle": "Орієнтовна вартість. Точна ціна розраховується після заміру.",
+        "note": "Ціни орієнтовні. Фінальна вартість залежить від площі, кількості кутів, обраного полотна, освітлення та складності монтажу.",
+        "items": [
+            ("Тіньова стеля", "від 10 у.е./м²", "Чистий контур без видимого декоративного багета."),
+            ("Паряща стеля", "від 10 у.е./м²", "М’яке підсвічування по периметру та ефект легкості."),
+            ("Світлові лінії", "від 35 у.е./м²", "Геометрія світла для сучасних інтер’єрів."),
+            ("Фотодрук", "від 25 у.е./м²", "Індивідуальне зображення на полотні."),
+            ("Apply-стелі", "від 25 у.е./м²", "Складні декоративні рішення та комбінації фактур."),
+            ("Зоряне небо", "від 35 у.е./м²", "Атмосферний світловий сценарій для кімнати."),
+            ("Карнизи", "від 25 у.е.", "Акуратні рішення для штор і ніш."),
+        ],
+    },
+    "en": {
+        "title": "Current prices",
+        "subtitle": "Estimated pricing. The final price is calculated after measurement.",
+        "note": "Prices are approximate. The final cost depends on area, number of corners, selected material, lighting and installation complexity.",
+        "items": [
+            ("Shadow ceiling", "from 10 USD/m²", "A clean perimeter without a visible decorative trim."),
+            ("Floating ceiling", "from 10 USD/m²", "Soft perimeter lighting and a light floating effect."),
+            ("Light lines", "from 35 USD/m²", "Light geometry for modern interiors."),
+            ("Photo printing", "from 25 USD/m²", "A custom image printed on the ceiling material."),
+            ("Apply ceilings", "from 25 USD/m²", "Decorative solutions with combined textures."),
+            ("Starry sky", "from 35 USD/m²", "Atmospheric lighting for a room."),
+            ("Curtain rails", "from 25 USD", "Neat solutions for curtains and niches."),
+        ],
+    },
+}
+
+work_content = {
+    "ru": {
+        "title": "Примеры наших работ",
+        "subtitle": "Ровные фото по категориям: максимум четыре работы в ряду и короткие подписи без перегруза.",
+        "details": "Подробнее",
+        "price": "Узнать стоимость",
+        "viber": "Написать в Viber",
+        "close": "Закрыть",
+        "meta": ("Локация: Одесса", "Площадь: по замеру", "Фактура: матовая", "Свет: LED / световые линии", "Технология: профиль по задаче"),
+        "categories": [
+            ("Световые линии", [
+                ("Геометрические световые линии", "Чёткая световая геометрия в современном интерьере.", "img/eralux/eralux-signed-light-lines-01.jpg"),
+                ("Линии света в гостиной", "Мягкое освещение без визуального шума.", "img/eralux/eralux-signed-light-lines-02.jpg"),
+                ("Световой акцент", "Аккуратная работа с направлением света.", "img/eralux/eralux-signed-light-lines-03.jpg"),
+                ("Минималистичные линии", "Сдержанный потолок с выразительным контуром.", "img/eralux/eralux-signed-light-lines-04.jpg"),
+            ]),
+            ("Парящий потолок", [
+                ("Парящий контур", "Лёгкая подсветка по периметру комнаты.", "img/eralux/eralux-gallery-led-perimeter-01.jpg"),
+                ("LED-подсветка периметра", "Ровный мягкий свет для вечернего сценария.", "img/eralux/eralux-gallery-led-perimeter-02.jpg"),
+                ("Периметральная подсветка", "Чистая линия света по краю потолка.", "img/eralux/eralux-signed-led-perimeter-01.jpg"),
+                ("Тёплый LED-контур", "Комфортное освещение для жилой зоны.", "img/eralux/eralux-signed-led-perimeter-02.jpg"),
+            ]),
+            ("Ниша под шторы", [
+                ("Скрытая ниша", "Карниз спрятан, линия потолка остаётся чистой.", "img/eralux/eralux-gallery-curtain-niche-01.jpg"),
+                ("Ниша вдоль окна", "Аккуратное решение для штор в комнате.", "img/eralux/eralux-gallery-curtain-niche-02.jpg"),
+                ("Ниша с ровным контуром", "Сдержанный интерьер без лишних деталей.", "img/eralux/eralux-signed-curtain-niche-01.jpg"),
+                ("Чистая зона окна", "Шторы выглядят встроенными в интерьер.", "img/eralux/eralux-signed-curtain-niche-02.jpg"),
+            ]),
+            ("Теневой потолок", [
+                ("Теневой профиль", "Аккуратный контур между стеной и потолком.", "img/eralux/eralux-gallery-shadow-ceiling-01.jpg"),
+                ("Матовый потолок", "Спокойная поверхность для современной комнаты.", "img/eralux/eralux-gallery-bedroom-ceiling-01.jpg"),
+                ("Потолок в коридоре", "Практичное решение для проходной зоны.", "img/eralux/eralux-gallery-hallway-ceiling-01.jpg"),
+                ("Потолок в ванной", "Чистая геометрия для влажного помещения.", "img/eralux/eralux-gallery-bathroom-ceiling-01.jpg"),
+            ]),
+        ],
+    },
+    "uk": {
+        "title": "Приклади наших робіт",
+        "subtitle": "Рівні фото за категоріями: максимум чотири роботи в ряду та короткі підписи без перевантаження.",
+        "details": "Детальніше",
+        "price": "Дізнатися вартість",
+        "viber": "Написати у Viber",
+        "close": "Закрити",
+        "meta": ("Локація: Одеса", "Площа: за заміром", "Фактура: матова", "Світло: LED / світлові лінії", "Технологія: профіль під задачу"),
+        "categories": [
+            ("Світлові лінії", [
+                ("Геометричні світлові лінії", "Чітка світлова геометрія в сучасному інтер’єрі.", "img/eralux/eralux-signed-light-lines-01.jpg"),
+                ("Лінії світла у вітальні", "М’яке освітлення без візуального шуму.", "img/eralux/eralux-signed-light-lines-02.jpg"),
+                ("Світловий акцент", "Акуратна робота з напрямком світла.", "img/eralux/eralux-signed-light-lines-03.jpg"),
+                ("Мінімалістичні лінії", "Стримана стеля з виразним контуром.", "img/eralux/eralux-signed-light-lines-04.jpg"),
+            ]),
+            ("Паряща стеля", [
+                ("Парящий контур", "Легке підсвічування по периметру кімнати.", "img/eralux/eralux-gallery-led-perimeter-01.jpg"),
+                ("LED-підсвічування периметра", "Рівне м’яке світло для вечірнього сценарію.", "img/eralux/eralux-gallery-led-perimeter-02.jpg"),
+                ("Периметральне підсвічування", "Чиста лінія світла по краю стелі.", "img/eralux/eralux-signed-led-perimeter-01.jpg"),
+                ("Теплий LED-контур", "Комфортне освітлення для житлової зони.", "img/eralux/eralux-signed-led-perimeter-02.jpg"),
+            ]),
+            ("Ніша під штори", [
+                ("Прихована ніша", "Карниз схований, лінія стелі залишається чистою.", "img/eralux/eralux-gallery-curtain-niche-01.jpg"),
+                ("Ніша вздовж вікна", "Акуратне рішення для штор у кімнаті.", "img/eralux/eralux-gallery-curtain-niche-02.jpg"),
+                ("Ніша з рівним контуром", "Стриманий інтер’єр без зайвих деталей.", "img/eralux/eralux-signed-curtain-niche-01.jpg"),
+                ("Чиста зона вікна", "Штори виглядають вбудованими в інтер’єр.", "img/eralux/eralux-signed-curtain-niche-02.jpg"),
+            ]),
+            ("Тіньова стеля", [
+                ("Тіньовий профіль", "Акуратний контур між стіною та стелею.", "img/eralux/eralux-gallery-shadow-ceiling-01.jpg"),
+                ("Матова стеля", "Спокійна поверхня для сучасної кімнати.", "img/eralux/eralux-gallery-bedroom-ceiling-01.jpg"),
+                ("Стеля в коридорі", "Практичне рішення для прохідної зони.", "img/eralux/eralux-gallery-hallway-ceiling-01.jpg"),
+                ("Стеля у ванній", "Чиста геометрія для вологого приміщення.", "img/eralux/eralux-gallery-bathroom-ceiling-01.jpg"),
+            ]),
+        ],
+    },
+    "en": {
+        "title": "Examples of our work",
+        "subtitle": "Clean project photos by category, with short captions and no overloaded metadata in the grid.",
+        "details": "Details",
+        "price": "Get the price",
+        "viber": "Write in Viber",
+        "close": "Close",
+        "meta": ("Location: Odesa", "Area: measured individually", "Texture: matte", "Lighting: LED / light lines", "Technology: profile selected for the project"),
+        "categories": [
+            ("Light lines", [
+                ("Geometric light lines", "Clear lighting geometry for a modern interior.", "img/eralux/eralux-signed-light-lines-01.jpg"),
+                ("Light lines in a living room", "Soft lighting without visual noise.", "img/eralux/eralux-signed-light-lines-02.jpg"),
+                ("Lighting accent", "Careful work with light direction.", "img/eralux/eralux-signed-light-lines-03.jpg"),
+                ("Minimal light lines", "A restrained ceiling with a clear outline.", "img/eralux/eralux-signed-light-lines-04.jpg"),
+            ]),
+            ("Floating ceiling", [
+                ("Floating contour", "Light perimeter lighting around the room.", "img/eralux/eralux-gallery-led-perimeter-01.jpg"),
+                ("LED perimeter lighting", "Even soft light for an evening scenario.", "img/eralux/eralux-gallery-led-perimeter-02.jpg"),
+                ("Perimeter LED lighting", "A clean light line along the ceiling edge.", "img/eralux/eralux-signed-led-perimeter-01.jpg"),
+                ("Warm LED contour", "Comfortable lighting for a living area.", "img/eralux/eralux-signed-led-perimeter-02.jpg"),
+            ]),
+            ("Curtain niche", [
+                ("Hidden curtain niche", "The rail is hidden and the ceiling line stays clean.", "img/eralux/eralux-gallery-curtain-niche-01.jpg"),
+                ("Niche along the window", "A neat curtain solution for the room.", "img/eralux/eralux-gallery-curtain-niche-02.jpg"),
+                ("Clean niche contour", "A restrained interior without extra details.", "img/eralux/eralux-signed-curtain-niche-01.jpg"),
+                ("Clean window zone", "Curtains look integrated into the interior.", "img/eralux/eralux-signed-curtain-niche-02.jpg"),
+            ]),
+            ("Shadow ceiling", [
+                ("Shadow profile", "A neat contour between the wall and ceiling.", "img/eralux/eralux-gallery-shadow-ceiling-01.jpg"),
+                ("Matte ceiling", "A calm surface for a modern room.", "img/eralux/eralux-gallery-bedroom-ceiling-01.jpg"),
+                ("Hallway ceiling", "A practical solution for a transit area.", "img/eralux/eralux-gallery-hallway-ceiling-01.jpg"),
+                ("Bathroom ceiling", "Clean geometry for a humid room.", "img/eralux/eralux-gallery-bathroom-ceiling-01.jpg"),
+            ]),
+        ],
+    },
+}
+
 palette_meta = {
     "ru": ("Палитра потолков", "Компактный каталог оттенков по номерам", "Цвет и оттенок могут отличаться в зависимости от освещения и настроек экрана. Точный выбор делается по реальным образцам при замере."),
     "uk": ("Палітра стель", "Компактний каталог відтінків за номерами", "Колір і відтінок можуть відрізнятися залежно від освітлення та налаштувань екрана. Точний вибір робиться за реальними зразками під час заміру."),
@@ -242,8 +395,8 @@ for source_number, source_image, visible_numbers in palette_sources:
 
 benefits_content = {
     "ru": {
-        "title": "Наши преимущества",
-        "subtitle": "Работаем аккуратно, быстро и с гарантией 12 лет",
+        "title": "Что вы получаете с ERALUX",
+        "subtitle": "Аккуратный монтаж, понятный расчёт и современные решения для потолка",
         "items": [
             ("shield", "12 лет гарантии", "Качественные материалы и ответственность за монтаж."),
             ("ruler", "Бесплатный замер", "Мастер приедет, сделает точные замеры и подготовит расчёт."),
@@ -254,8 +407,8 @@ benefits_content = {
         ],
     },
     "uk": {
-        "title": "Наші переваги",
-        "subtitle": "Працюємо акуратно, швидко та з гарантією 12 років",
+        "title": "Що ви отримуєте з ERALUX",
+        "subtitle": "Акуратний монтаж, зрозумілий розрахунок і сучасні рішення для стелі",
         "items": [
             ("shield", "12 років гарантії", "Якісні матеріали та відповідальність за монтаж."),
             ("ruler", "Безкоштовний замір", "Майстер приїде, зробить точні виміри та підготує розрахунок."),
@@ -266,8 +419,8 @@ benefits_content = {
         ],
     },
     "en": {
-        "title": "Our advantages",
-        "subtitle": "Careful work, fast installation and a 12-year warranty",
+        "title": "What you get with ERALUX",
+        "subtitle": "Careful installation, clear pricing and modern ceiling solutions",
         "items": [
             ("shield", "12-year warranty", "Quality materials and responsibility for the installation."),
             ("ruler", "Free measurement", "A specialist visits, takes accurate measurements and prepares an estimate."),
@@ -482,6 +635,10 @@ def page(lang: str) -> str:
     benefits_end = s.find('<div class="seo-block seo-block_main">', benefits_start)
     if benefits_start != -1 and benefits_end != -1:
         s = s[:benefits_start] + benefits(lang) + "\n\t\t" + s[benefits_end:]
+    pref_start = s.find('<div class="other section wrapper new-pref">')
+    pref_end = s.find('<section class="eralux-about', pref_start)
+    if pref_start != -1 and pref_end != -1:
+        s = s[:pref_start] + benefits(lang) + "\n\t\t" + s[pref_end:]
     seo_start = s.find('<div class="seo-block seo-block_main">')
     footer_offer_start = s.find('<div class="footer-offer">', seo_start)
     if seo_start != -1 and footer_offer_start != -1:
@@ -503,10 +660,15 @@ def page(lang: str) -> str:
         1,
     )
     floating = (
-        f'<div class="eralux-floating"><a class="eralux-floating__btn eralux-floating__btn_tg" href="#" aria-label="Telegram" data-disabled="true">TG</a>'
-        f'<a class="eralux-floating__btn eralux-floating__btn_viber" href="https://viber.me/380968074894" aria-label="{d["viber"]}">VB</a>'
-        f'<button class="eralux-floating__btn eralux-floating__top" type="button" aria-label="{d["top"]}">↑</button></div>\n'
-        '<script src="/js/eralux-update.js?v=rendered-swatch-1"></script>\n'
+        '<div class="eralux-floating floating-actions">'
+        '<span class="eralux-floating__btn floating-action floating-action--telegram is-disabled" aria-label="Telegram" data-disabled="true" title="Telegram link is not configured">'
+        '<img src="/img/icons/telegram.svg" alt="" aria-hidden="true"></span>'
+        f'<a class="eralux-floating__btn floating-action floating-action--viber" href="https://viber.me/380968074894" target="_blank" rel="noopener" aria-label="{d["viber"]}">'
+        '<img src="/img/icons/viber.svg" alt="" aria-hidden="true"></a>'
+        f'<button class="eralux-floating__btn floating-action floating-action--top eralux-floating__top" type="button" aria-label="{d["top"]}">'
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8l-4.6 4.6L5 12l7-7z" fill="currentColor"/></svg>'
+        '</button></div>\n'
+        '<script src="/js/eralux-update.js?v=floating-icons-1"></script>\n'
     )
     return s.replace("</body>", floating + "</body>")
 

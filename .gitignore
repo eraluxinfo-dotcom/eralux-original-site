@@ -13,3 +13,6 @@ deploy/ACCESS_PRIVATE*
 deploy/*password*
 deploy/*secret*
 configuration.php
+
+.tmp-chrome-floating/
+.tmp-chrome-*/
