@@ -1,7 +1,17 @@
 
 (function(){
+  if(window.location.search.indexOf('benefit-hover')>=0){var previewBenefit=document.querySelector('.benefit-card');if(previewBenefit){previewBenefit.classList.add('is-preview-hover');}}
   var topBtn=document.querySelector('.eralux-floating__top');
   if(topBtn){window.addEventListener('scroll',function(){topBtn.classList.toggle('is-visible',window.scrollY>420)});topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});}
+  document.querySelectorAll('[data-expand-card]').forEach(function(card){
+    card.addEventListener('click',function(){
+      var willOpen=!card.classList.contains('is-open');
+      var group=card.closest('.benefits-grid,.price-grid');
+      if(group){group.querySelectorAll('[data-expand-card]').forEach(function(item){item.classList.remove('is-open');item.setAttribute('aria-expanded','false');});}
+      card.classList.toggle('is-open',willOpen);
+      card.setAttribute('aria-expanded',willOpen?'true':'false');
+    });
+  });
   document.querySelectorAll('.case').forEach(function(card){card.addEventListener('click',function(e){if(window.matchMedia('(max-width: 767px)').matches && !e.target.closest('.case__overlay-actions')){card.classList.toggle('is-open');}})});
   document.querySelectorAll('[data-filter]').forEach(function(btn){btn.addEventListener('click',function(){var f=btn.getAttribute('data-filter');document.querySelectorAll('[data-filter]').forEach(function(b){b.classList.toggle('is-active',b===btn)});document.querySelectorAll('.case[data-cat]').forEach(function(c){c.style.display=(f==='all'||(c.getAttribute('data-cat')||'').indexOf(f)>=0)?'':'none';});});});
   var paletteModal=document.querySelector('.palette-modal');
@@ -59,4 +69,28 @@
     workModal.querySelectorAll('[data-work-close]').forEach(function(btn){btn.addEventListener('click',closeWork);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeWork();}});
   }
+  document.querySelectorAll('[data-lead-form]').forEach(function(form){
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+      var status=form.querySelector('.lead-form-status');
+      var button=form.querySelector('button[type="submit"],button:not([type])');
+      var lang=form.getAttribute('data-lang')||document.documentElement.lang||'ru';
+      var messages={
+        ru:{sending:'Отправляем...',success:'Спасибо! Заявка отправлена.',error:'Не удалось отправить. Напишите нам в Viber.'},
+        uk:{sending:'Надсилаємо...',success:'Дякуємо! Заявку надіслано.',error:'Не вдалося надіслати. Напишіть нам у Viber.'},
+        en:{sending:'Sending...',success:'Thank you! Your request has been sent.',error:'Could not send. Please write to us in Viber.'}
+      }[lang]||null;
+      var data=new FormData(form);
+      data.set('lang',lang);
+      data.set('page',window.location.href);
+      data.set('source','ERALUX website form');
+      if(status){status.textContent=messages.sending;}
+      if(button){button.disabled=true;}
+      fetch('/api/lead',{method:'POST',body:data,headers:{'accept':'application/json'}})
+        .then(function(response){return response.json().then(function(payload){if(!response.ok){throw new Error(payload.error||'Request failed');}return payload;});})
+        .then(function(){if(status){status.textContent=messages.success;}form.reset();})
+        .catch(function(){if(status){status.textContent=messages.error;}})
+        .finally(function(){if(button){button.disabled=false;}});
+    });
+  });
 })();

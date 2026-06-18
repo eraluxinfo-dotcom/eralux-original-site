@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 import colorsys
 import json
 import re
@@ -189,6 +189,51 @@ price_content = {
     },
 }
 
+price_content = {
+    "ru": {
+        "title": "Актуальные цены",
+        "subtitle": "Ориентировочная стоимость. Точная цена рассчитывается после замера.",
+        "note": "Цены ориентировочные. Финальная стоимость зависит от площади, количества углов, выбранного полотна, освещения и сложности монтажа.",
+        "items": [
+            ("Теневой потолок", "от 10 у.е./м²", "Теневой потолок создает тонкий аккуратный зазор между стеной и полотном, поэтому интерьер выглядит современно и собранно. Такая техника хорошо подходит для минималистичных комнат, где не хочется видеть декоративный багет. Контур подчеркивает геометрию помещения и делает переход от стены к потолку визуально легче. В дизайне это решение выглядит спокойно, дорого и очень чисто."),
+            ("Парящий потолок", "от 10 у.е./м²", "Парящий потолок строится на специальном профиле с мягкой LED-подсветкой по периметру. Свет отделяет потолок от стен и создает эффект легкости, будто полотно немного поднято в воздух. Такой прием особенно красиво работает вечером, когда основное освещение можно приглушить. В интерьере он добавляет глубину, уют и ощущение современной архитектуры."),
+            ("Световые линии", "от 35 у.е./м²", "Световые линии встраиваются в потолок как ровные световые акценты и помогают задать ритм всему помещению. Их можно делать прямыми, геометричными или более сложными под планировку комнаты. Техника требует точной подготовки профиля и аккуратного монтажа, чтобы линии выглядели идеально ровно. В дизайне это один из самых выразительных способов заменить обычную люстру и сделать интерьер современным."),
+            ("Фотопечать", "от 25 у.е./м²", "Фотопечать позволяет перенести на потолок изображение, узор или мягкий декоративный мотив. Важно подобрать картинку так, чтобы она не перегружала комнату и сочеталась с мебелью, стенами и светом. Техника хорошо подходит для детских, тематических зон, коммерческих помещений и акцентных интерьеров. При правильном выборе изображение выглядит не случайным декором, а частью общей идеи комнаты."),
+            ("Apply-стели", "от 25 у.е./м²", "Apply-стели позволяют сочетать несколько фактур, уровней и декоративных элементов в одном решении. Такая техника подходит, когда хочется сделать потолок более выразительным, но сохранить аккуратность. Комбинация матовых, глянцевых и световых деталей помогает выделить зоны и добавить интерьеру глубину. В дизайне это вариант для тех, кто хочет индивидуальный потолок без ощущения перегруза."),
+            ("Звездное небо", "от 35 у.е./м²", "Звездное небо создает мягкий световой сценарий с точками света, которые напоминают ночное небо. Техника может использовать оптоволокно или специальные световые элементы, в зависимости от желаемого эффекта. Такое решение особенно хорошо подходит для спален, детских и зон отдыха. В дизайне оно добавляет атмосферу, спокойствие и ощущение личного пространства."),
+            ("Карнизы", "от 25 у.е.", "Скрытые карнизы помогают спрятать крепление штор и оставить линию потолка чистой. Ниша рассчитывается заранее, чтобы ткань красиво выходила из потолка и не спорила с интерьером. Такая техника визуально увеличивает высоту помещения и делает окно более аккуратным. В дизайне это небольшая деталь, которая сильно влияет на ощущение завершенности комнаты."),
+        ],
+    },
+    "uk": {
+        "title": "Актуальні ціни",
+        "subtitle": "Орієнтовна вартість. Точна ціна розраховується після заміру.",
+        "note": "Ціни орієнтовні. Фінальна вартість залежить від площі, кількості кутів, обраного полотна, освітлення та складності монтажу.",
+        "items": [
+            ("Тіньова стеля", "від 10 у.е./м²", "Тіньова стеля створює тонкий акуратний зазор між стіною та полотном, тому інтер’єр виглядає сучасно й зібрано. Така техніка добре підходить для мінімалістичних кімнат, де не хочеться бачити декоративний багет. Контур підкреслює геометрію приміщення та робить перехід від стіни до стелі візуально легшим. У дизайні це рішення виглядає спокійно, дорого й дуже чисто."),
+            ("Паряща стеля", "від 10 у.е./м²", "Паряща стеля будується на спеціальному профілі з м’якою LED-підсвіткою по периметру. Світло відділяє стелю від стін і створює ефект легкості, ніби полотно трохи підняте в повітря. Такий прийом особливо красиво працює ввечері, коли основне освітлення можна приглушити. В інтер’єрі він додає глибину, затишок і відчуття сучасної архітектури."),
+            ("Світлові лінії", "від 35 у.е./м²", "Світлові лінії вбудовуються у стелю як рівні світлові акценти й допомагають задати ритм усьому приміщенню. Їх можна робити прямими, геометричними або складнішими під планування кімнати. Техніка потребує точної підготовки профілю та акуратного монтажу, щоб лінії виглядали ідеально рівно. У дизайні це один із найвиразніших способів замінити звичайну люстру й зробити інтер’єр сучасним."),
+            ("Фотодрук", "від 25 у.е./м²", "Фотодрук дозволяє перенести на стелю зображення, візерунок або м’який декоративний мотив. Важливо підібрати картинку так, щоб вона не перевантажувала кімнату й поєднувалася з меблями, стінами та світлом. Техніка добре підходить для дитячих, тематичних зон, комерційних приміщень і акцентних інтер’єрів. За правильного вибору зображення виглядає не випадковим декором, а частиною загальної ідеї кімнати."),
+            ("Apply-стелі", "від 25 у.е./м²", "Apply-стелі дозволяють поєднувати кілька фактур, рівнів і декоративних елементів в одному рішенні. Така техніка підходить, коли хочеться зробити стелю більш виразною, але зберегти акуратність. Комбінація матових, глянцевих і світлових деталей допомагає виділити зони та додати інтер’єру глибину. У дизайні це варіант для тих, хто хоче індивідуальну стелю без відчуття перевантаження."),
+            ("Зоряне небо", "від 35 у.е./м²", "Зоряне небо створює м’який світловий сценарій із точками світла, які нагадують нічне небо. Техніка може використовувати оптоволокно або спеціальні світлові елементи, залежно від бажаного ефекту. Таке рішення особливо добре підходить для спалень, дитячих і зон відпочинку. У дизайні воно додає атмосферу, спокій і відчуття особистого простору."),
+            ("Карнизи", "від 25 у.е.", "Приховані карнизи допомагають сховати кріплення штор і залишити лінію стелі чистою. Ніша розраховується заздалегідь, щоб тканина красиво виходила зі стелі й не сперечалася з інтер’єром. Така техніка візуально збільшує висоту приміщення та робить вікно акуратнішим. У дизайні це невелика деталь, яка сильно впливає на відчуття завершеності кімнати."),
+        ],
+    },
+    "en": {
+        "title": "Current prices",
+        "subtitle": "Estimated pricing. The final price is calculated after measurement.",
+        "note": "Prices are approximate. The final cost depends on area, number of corners, selected material, lighting and installation complexity.",
+        "items": [
+            ("Shadow ceiling", "from 10 USD/m²", "A shadow ceiling creates a thin, clean gap between the wall and the ceiling surface, so the interior feels modern and precise. This technique works especially well in minimalist rooms where visible decorative trim is not wanted. The contour highlights the room geometry and makes the transition from wall to ceiling feel lighter. In design, it looks calm, refined and very clean."),
+            ("Floating ceiling", "from 10 USD/m²", "A floating ceiling uses a special profile with soft LED lighting around the perimeter. The glow separates the ceiling from the walls and creates a light suspended effect. This approach looks especially beautiful in the evening when the main light is dimmed. It adds depth, comfort and a sense of modern architecture to the room."),
+            ("Light lines", "from 35 USD/m²", "Light lines are built into the ceiling as clean illuminated accents that set the rhythm of the room. They can be straight, geometric or adapted to a more complex layout. The technique requires precise profile preparation and careful installation so every line stays perfectly even. In design, it is one of the strongest ways to replace a standard chandelier and make the interior feel contemporary."),
+            ("Photo printing", "from 25 USD/m²", "Photo printing makes it possible to place an image, pattern or soft decorative motif on the ceiling. The key is choosing artwork that supports the room rather than overwhelming it. This technique works well for children’s rooms, themed zones, commercial spaces and accent interiors. When selected carefully, the image feels like part of the full design idea instead of random decoration."),
+            ("Apply ceilings", "from 25 USD/m²", "Apply ceilings combine several textures, levels and decorative elements in one ceiling solution. This technique is useful when the ceiling should be more expressive while still staying neat. Matte, glossy and illuminated details can help zone the room and add depth to the interior. In design, it is a good option for a custom ceiling without visual overload."),
+            ("Starry sky", "from 35 USD/m²", "A starry sky ceiling creates a soft lighting scenario with points of light that resemble the night sky. The technique can use fiber optics or special lighting elements depending on the desired effect. It is especially suitable for bedrooms, children’s rooms and relaxation areas. In design, it adds atmosphere, calm and a feeling of personal space."),
+            ("Curtain rails", "from 25 USD", "Hidden curtain rails conceal the curtain fixing and keep the ceiling line clean. The niche is planned in advance so the fabric appears to come neatly from the ceiling. This technique visually increases the room height and makes the window area look more refined. In design, it is a small detail that strongly affects the feeling of a finished interior."),
+        ],
+    },
+}
+
 work_content = {
     "ru": {
         "title": "Примеры наших работ",
@@ -208,7 +253,7 @@ work_content = {
             ("Парящий потолок", [
                 ("Парящий контур", "Лёгкая подсветка по периметру комнаты.", "img/eralux/eralux-gallery-led-perimeter-01.jpg"),
                 ("LED-подсветка периметра", "Ровный мягкий свет для вечернего сценария.", "img/eralux/eralux-gallery-led-perimeter-02.jpg"),
-                ("Периметральная подсветка", "Чистая линия света по краю потолка.", "img/eralux/eralux-signed-led-perimeter-01.jpg"),
+                ("Периметральная подсветка", "Чистая линия света по краю потолка.", "img/eralux/eralux-internet-perimeter-lighting.jpg"),
                 ("Тёплый LED-контур", "Комфортное освещение для жилой зоны.", "img/eralux/eralux-signed-led-perimeter-02.jpg"),
             ]),
             ("Ниша под шторы", [
@@ -243,7 +288,7 @@ work_content = {
             ("Паряща стеля", [
                 ("Парящий контур", "Легке підсвічування по периметру кімнати.", "img/eralux/eralux-gallery-led-perimeter-01.jpg"),
                 ("LED-підсвічування периметра", "Рівне м’яке світло для вечірнього сценарію.", "img/eralux/eralux-gallery-led-perimeter-02.jpg"),
-                ("Периметральне підсвічування", "Чиста лінія світла по краю стелі.", "img/eralux/eralux-signed-led-perimeter-01.jpg"),
+                ("Периметральне підсвічування", "Чиста лінія світла по краю стелі.", "img/eralux/eralux-internet-perimeter-lighting.jpg"),
                 ("Теплий LED-контур", "Комфортне освітлення для житлової зони.", "img/eralux/eralux-signed-led-perimeter-02.jpg"),
             ]),
             ("Ніша під штори", [
@@ -278,7 +323,7 @@ work_content = {
             ("Floating ceiling", [
                 ("Floating contour", "Light perimeter lighting around the room.", "img/eralux/eralux-gallery-led-perimeter-01.jpg"),
                 ("LED perimeter lighting", "Even soft light for an evening scenario.", "img/eralux/eralux-gallery-led-perimeter-02.jpg"),
-                ("Perimeter LED lighting", "A clean light line along the ceiling edge.", "img/eralux/eralux-signed-led-perimeter-01.jpg"),
+                ("Perimeter LED lighting", "A clean light line along the ceiling edge.", "img/eralux/eralux-internet-perimeter-lighting.jpg"),
                 ("Warm LED contour", "Comfortable lighting for a living area.", "img/eralux/eralux-signed-led-perimeter-02.jpg"),
             ]),
             ("Curtain niche", [
@@ -331,6 +376,7 @@ palette_descriptions = {
 }
 
 palette_sources = [
+    ("0", "manual", ["001"]),
     ("1", "img/colors/1.jpg", ["420", "753", "739", "733", "717", "713", "721", "707", "507", "666", "644", "624", "652", "628", "608"]),
     ("2", "img/colors/2.jpg", ["235", "231", "227", "229", "225", "233", "162", "160", "156", "140", "120", "114", "104", "100", "604", "205", "201", "110", "333", "319", "313", "317", "311", "309", "305", "303"]),
     ("3", "img/colors/3.jpg", ["82", "94", "95"]),
@@ -353,6 +399,13 @@ def adjust_rgb(rgb: tuple[int, int, int], factor: float, offset: int = 0) -> tup
 
 
 def swatch_color(number: str) -> dict[str, str]:
+    if number == "001":
+        return {
+            "base": "#ffffff",
+            "shadow": "#e7e9ee",
+            "highlight": "#ffffff",
+            "finish": "matte",
+        }
     path = root / "processed-images" / "palette-swatches" / f"palette-{number}.jpg"
     if not path.exists():
         return {
@@ -396,31 +449,34 @@ for source_number, source_image, visible_numbers in palette_sources:
 
 palette_group_labels = {
     "ru": [
-        ("light", "Белые и светлые"),
-        ("neutral", "Бежевые и нейтральные"),
-        ("yellow", "Жёлтые и золотистые"),
+        ("light", "Светлые и белые"),
+        ("blue", "Голубые и синие"),
         ("green", "Зелёные"),
-        ("blue", "Синие и бирюзовые"),
-        ("violet", "Бордовые и фиолетовые"),
-        ("dark", "Серые и тёмные"),
+        ("dark", "Серые и графитовые"),
+        ("neutral", "Бежевые и нейтральные"),
+        ("red", "Красные и бордовые"),
+        ("violet", "Розовые и фиолетовые"),
+        ("yellow", "Жёлтые и тёплые"),
     ],
     "uk": [
-        ("light", "Білі та світлі"),
-        ("neutral", "Бежеві та нейтральні"),
-        ("yellow", "Жовті та золотисті"),
+        ("light", "Світлі та білі"),
+        ("blue", "Блакитні та сині"),
         ("green", "Зелені"),
-        ("blue", "Сині та бірюзові"),
-        ("violet", "Бордові та фіолетові"),
-        ("dark", "Сірі та темні"),
+        ("dark", "Сірі та графітові"),
+        ("neutral", "Бежеві та нейтральні"),
+        ("red", "Червоні та бордові"),
+        ("violet", "Рожеві та фіолетові"),
+        ("yellow", "Жовті та теплі"),
     ],
     "en": [
-        ("light", "White and light"),
-        ("neutral", "Beige and neutral"),
-        ("yellow", "Yellow and gold"),
+        ("light", "Light and white"),
+        ("blue", "Blue shades"),
         ("green", "Green shades"),
-        ("blue", "Blue and turquoise"),
-        ("violet", "Burgundy and violet"),
-        ("dark", "Gray and dark"),
+        ("dark", "Gray and graphite"),
+        ("neutral", "Beige and neutral"),
+        ("red", "Red and burgundy"),
+        ("violet", "Pink and violet"),
+        ("yellow", "Yellow and warm"),
     ],
 }
 
@@ -444,7 +500,9 @@ def palette_group(item: dict[str, str]) -> str:
         return "green"
     if 175 <= hue < 255:
         return "blue"
-    if hue >= 255 or hue < 20:
+    if hue < 20 or hue >= 345:
+        return "red"
+    if hue >= 255:
         return "violet"
     return "neutral"
 
@@ -522,6 +580,81 @@ about_content = {
     },
 }
 
+cta_content = {
+    "ru": {
+        "title": "Запишитесь на замер сегодня",
+        "text": "Оставьте контактные данные — специалист ERALUX перезвонит, уточнит детали и поможет подобрать потолок под ваш интерьер.",
+        "name": "Ваше имя",
+        "phone": "Введите ваш номер*",
+        "button": "Заказать замер",
+        "viber": "Написать в Viber",
+        "telegram": "Написать в Telegram",
+        "call": "Позвонить",
+        "benefits": ["Бесплатный замер по Одессе и области", "Подбор фактуры, цвета и подсветки", "Понятный расчёт до начала работ", "Аккуратный монтаж и гарантия"],
+    },
+    "uk": {
+        "title": "Запишіться на замір сьогодні",
+        "text": "Залиште контактні дані — спеціаліст ERALUX передзвонить, уточнить деталі та допоможе підібрати стелю під ваш інтер’єр.",
+        "name": "Ваше ім’я",
+        "phone": "Введіть ваш номер*",
+        "button": "Замовити замір",
+        "viber": "Написати у Viber",
+        "telegram": "Написати у Telegram",
+        "call": "Зателефонувати",
+        "benefits": ["Безкоштовний замір по Одесі та області", "Підбір фактури, кольору та підсвічування", "Зрозумілий розрахунок до початку робіт", "Акуратний монтаж і гарантія"],
+    },
+    "en": {
+        "title": "Request a measurement today",
+        "text": "Leave your contact details and an ERALUX specialist will call back, clarify the project and help select a ceiling for your interior.",
+        "name": "Your name",
+        "phone": "Enter your phone*",
+        "button": "Request a measurement",
+        "viber": "Write in Viber",
+        "telegram": "Write in Telegram",
+        "call": "Call us",
+        "benefits": ["Free measurement in Odesa and the region", "Material, color and lighting selection", "Clear estimate before installation", "Careful installation and warranty"],
+    },
+}
+
+benefits_content = {
+    "ru": {
+        "title": "Что вы получаете с ERALUX",
+        "subtitle": "Аккуратный монтаж, понятный расчет и современные решения для потолка",
+        "items": [
+            ("shield", "12 лет гарантии", "Мы используем проверенные материалы и отвечаем за качество монтажа. Потолок сохраняет форму, цвет и аккуратный внешний вид при нормальной эксплуатации. Все узлы крепления подбираются под помещение, чтобы конструкция служила спокойно и надежно. Гарантия дает уверенность, что результат останется красивым не только в день установки."),
+            ("ruler", "Бесплатный замер", "Мастер приезжает на объект и внимательно оценивает геометрию помещения. На замере уточняются углы, ниши, светильники, карнизы и будущая подсветка. После этого вы получаете понятный расчет без лишних сюрпризов. Такой подход помогает выбрать решение, которое подходит и по виду, и по бюджету."),
+            ("tools", "Монтаж за 1 день", "Большинство стандартных потолков мы устанавливаем в течение одного рабочего дня. Команда заранее готовит материалы и план работ, чтобы монтаж проходил быстро и спокойно. Мы бережно относимся к стенам, мебели и уже готовому ремонту. В результате комната быстро получает чистый, ровный и завершенный вид."),
+            ("sparkle", "Аккуратная работа", "Для нас важны ровные линии, чистые стыки и внимательное отношение к деталям. Мы работаем без лишнего шума и стараемся оставлять после себя порядок. Каждый участок потолка проверяется визуально, чтобы поверхность выглядела цельно. Именно аккуратность делает интерьер дороже и приятнее в ежедневном использовании."),
+            ("lamp", "Современные решения", "ERALUX помогает сделать потолок частью дизайна, а не просто ровной поверхностью. Световые линии, теневой профиль, ниши под шторы и LED-подсветка создают нужную атмосферу в комнате. Мы подбираем решение под стиль интерьера, высоту помещения и сценарии освещения. Такой потолок выглядит современно днем и особенно эффектно вечером."),
+            ("pin", "Одесса и область", "Мы работаем по Одессе и выезжаем на объекты в Одесской области. Мастер заранее согласует удобное время и приезжает с учетом особенностей объекта. Можно заказать замер для квартиры, дома, офиса или коммерческого помещения. Локальная работа помогает быстрее решать вопросы и держать связь на каждом этапе."),
+        ],
+    },
+    "uk": {
+        "title": "Що ви отримуєте з ERALUX",
+        "subtitle": "Акуратний монтаж, зрозумілий розрахунок і сучасні рішення для стелі",
+        "items": [
+            ("shield", "12 років гарантії", "Ми використовуємо перевірені матеріали та відповідаємо за якість монтажу. Стеля зберігає форму, колір і акуратний вигляд за нормальної експлуатації. Усі вузли кріплення підбираються під конкретне приміщення, щоб конструкція служила спокійно й надійно. Гарантія дає впевненість, що результат залишиться красивим не лише в день встановлення."),
+            ("ruler", "Безкоштовний замір", "Майстер приїжджає на об’єкт і уважно оцінює геометрію приміщення. Під час заміру уточнюються кути, ніші, світильники, карнизи та майбутня підсвітка. Після цього ви отримуєте зрозумілий розрахунок без зайвих сюрпризів. Такий підхід допомагає вибрати рішення, яке підходить і за виглядом, і за бюджетом."),
+            ("tools", "Монтаж за 1 день", "Більшість стандартних стель ми встановлюємо протягом одного робочого дня. Команда заздалегідь готує матеріали та план робіт, щоб монтаж проходив швидко й спокійно. Ми бережно ставимося до стін, меблів і вже готового ремонту. У результаті кімната швидко отримує чистий, рівний і завершений вигляд."),
+            ("sparkle", "Акуратна робота", "Для нас важливі рівні лінії, чисті стики та уважне ставлення до деталей. Ми працюємо без зайвого шуму й стараємося залишати після себе порядок. Кожна ділянка стелі перевіряється візуально, щоб поверхня виглядала цілісно. Саме акуратність робить інтер’єр дорожчим і приємнішим у щоденному використанні."),
+            ("lamp", "Сучасні рішення", "ERALUX допомагає зробити стелю частиною дизайну, а не просто рівною поверхнею. Світлові лінії, тіньовий профіль, ніші під штори та LED-підсвічування створюють потрібну атмосферу в кімнаті. Ми підбираємо рішення під стиль інтер’єру, висоту приміщення та сценарії освітлення. Така стеля виглядає сучасно вдень і особливо ефектно ввечері."),
+            ("pin", "Одеса та область", "Ми працюємо по Одесі та виїжджаємо на об’єкти в Одеській області. Майстер заздалегідь погоджує зручний час і приїжджає з урахуванням особливостей об’єкта. Можна замовити замір для квартири, будинку, офісу або комерційного приміщення. Локальна робота допомагає швидше вирішувати питання й тримати зв’язок на кожному етапі."),
+        ],
+    },
+    "en": {
+        "title": "What you get with ERALUX",
+        "subtitle": "Careful installation, clear pricing and modern ceiling solutions",
+        "items": [
+            ("shield", "12-year warranty", "We use proven materials and stand behind the installation quality. The ceiling keeps its shape, color and clean appearance under normal use. Every fixing point is selected for the room, so the system feels stable and reliable. The warranty gives you confidence that the result will stay beautiful long after installation day."),
+            ("ruler", "Free measurement", "A specialist visits the site and carefully checks the room geometry. Corners, niches, lighting points, curtain tracks and LED details are clarified during the visit. After that you receive a clear estimate without unpleasant surprises. This helps choose a solution that fits both the interior and the budget."),
+            ("tools", "Installation in 1 day", "Most standard ceilings are installed within one working day. The team prepares materials and the work plan in advance, so the process stays fast and calm. We treat walls, furniture and finished renovation with care. As a result, the room quickly gets a clean, even and finished look."),
+            ("sparkle", "Neat work", "Clean lines, accurate joints and attention to detail are central to our work. We install carefully and try to leave the space tidy after the job. Every part of the ceiling is visually checked so the surface feels complete. This level of care makes the interior look more refined in everyday use."),
+            ("lamp", "Modern solutions", "ERALUX helps turn the ceiling into part of the design, not just a flat surface. Light lines, shadow profiles, curtain niches and LED lighting create the right atmosphere in the room. We match the solution to the interior style, ceiling height and lighting scenarios. The result looks modern during the day and especially expressive in the evening."),
+            ("pin", "Odesa region", "We work across Odesa and travel to projects throughout the Odesa region. A specialist agrees on a convenient time and arrives prepared for the site conditions. Measurements are available for apartments, houses, offices and commercial spaces. Local service helps us answer faster and stay connected at every stage."),
+        ],
+    },
+}
+
 icon_paths = {
     "shield": '<path d="M12 3l7 3v5c0 4.4-2.8 8.4-7 10-4.2-1.6-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/>',
     "ruler": '<path d="M4 17L17 4l3 3L7 20l-3-3z"/><path d="M14 7l3 3"/><path d="M11 10l2 2"/><path d="M8 13l3 3"/>',
@@ -567,7 +700,7 @@ def gallery(lang: str) -> str:
 def prices(lang: str) -> str:
     data = price_content[lang]
     cards = "".join(
-        f'<article class="price-card"><h3>{title}</h3><strong class="price-value">{value}</strong><p>{hint}</p></article>'
+        f'<button class="price-card" type="button" data-expand-card aria-expanded="false"><h3>{title}</h3><strong class="price-value">{value}</strong><p>{hint}</p></button>'
         for title, value, hint in data["items"]
     )
     return (
@@ -597,9 +730,9 @@ def palette(lang: str) -> str:
             f'<article class="eralux-palette-card palette-card--{finish}" style="{style}" '
             f'data-palette-number="№ {number}" data-palette-description="{escape(description, quote=True)}" '
             f'data-palette-base="{base}" data-palette-shadow="{shadow}" data-palette-highlight="{highlight}" data-palette-finish="{finish}" data-palette-finish-label="{finish_label}">'
-            '<button class="palette-swatch" type="button" aria-label="palette sample">'
+            '<button class="palette-swatch palette-strip" type="button" aria-label="palette sample">'
             '<span class="palette-swatch-surface"></span>'
-            f'<span class="palette-finish-badge">{finish_label}</span>'
+            f'<span class="palette-strip__number">№ {number}</span>'
             "</button>"
             '<div class="palette-card-body">'
             f'<span class="palette-number">№ {number}</span>'
@@ -615,9 +748,9 @@ def palette(lang: str) -> str:
             continue
         group_cards.sort(key=lambda card: card[0], reverse=True)
         groups.append(
-            f'<section class="palette-group" data-palette-group="{group_key}">'
+            f'<section class="palette-group palette-family" data-palette-group="{group_key}">'
             f'<h3 class="palette-group__title">{group_title}</h3>'
-            f'<div class="palette-group__grid">{"".join(card[1] for card in group_cards)}</div>'
+            f'<div class="palette-group__grid palette-strip-grid">{"".join(card[1] for card in group_cards)}</div>'
             '</section>'
         )
     return (
@@ -643,10 +776,10 @@ def benefits(lang: str) -> str:
     cards = []
     for icon, title, text in data["items"]:
         cards.append(
-            '<article class="benefit-card">'
+            '<button class="benefit-card" type="button" data-expand-card aria-expanded="false">'
             f'<span class="benefit-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">{icon_paths[icon]}</svg></span>'
             f"<h3>{title}</h3><p>{text}</p>"
-            "</article>"
+            "</button>"
         )
     return (
         '<section class="benefits-section wrapper section" id="benefits">'
@@ -666,23 +799,35 @@ def about(lang: str) -> str:
 
 
 def cta(lang: str) -> str:
-    data = about_content[lang]
+    data = cta_content[lang]
+    benefits = "".join(
+        f'<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-5"/><circle cx="12" cy="12" r="9"/></svg>{item}</li>'
+        for item in data["benefits"]
+    )
     return (
-        '<section class="eralux-cta">'
+        '<section class="eralux-cta" id="callback">'
         '<div class="container eralux-cta__content">'
-        f'<div><h2>{data["cta_title"]}</h2><p>{data["cta_text"]}</p></div>'
-        '<form class="form js-less eralux-cta__form" action="javascript:void(0);" method="POST">'
+        f'<div class="eralux-cta__copy"><h2>{data["title"]}</h2><p>{data["text"]}</p><ul>{benefits}</ul></div>'
+        '<div class="eralux-cta__panel">'
+        f'<form class="form js-less eralux-cta__form" action="/api/lead" method="POST" data-lead-form data-lang="{lang}">'
         f'<input class="input form__input form__input_horiz" type="text" name="name" required placeholder="{data["name"]}">'
         f'<input class="input form__input form__input_horiz" type="tel" name="phone" required placeholder="{data["phone"]}">'
+        '<input type="text" name="website" tabindex="-1" autocomplete="off" class="lead-trap" aria-hidden="true">'
         f'<button class="button form__button btn-4">{data["button"]}</button>'
-        "</form></div></section>"
+        '<p class="lead-form-status" aria-live="polite"></p>'
+        '</form>'
+        '<div class="eralux-cta__actions">'
+        f'<a class="cta-action cta-action--viber" href="https://viber.me/380968074894">{data["viber"]}</a>'
+        f'<a class="cta-action cta-action--telegram" href="tg://resolve?phone=380968074894">{data["telegram"]}</a>'
+        f'<a class="cta-action cta-action--phone" href="tel:+380968074894">{data["call"]}</a>'
+        '</div></div></div></section>'
     )
 
 
 def page(lang: str) -> str:
     s = base_html
     d = T[lang]
-    path = "" if lang == "ru" else f"{lang}/"
+    path = f"{lang}/"
     s = re.sub(r'<html lang="[^"]+"', f'<html lang="{lang}"', s, count=1)
     s = re.sub(r"<title>.*?</title>", f"<title>{d['title']}</title>", s, count=1, flags=re.S)
     s = re.sub(
@@ -692,13 +837,33 @@ def page(lang: str) -> str:
         count=1,
         flags=re.S,
     )
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ERALUX",
+        "url": f"https://eralux.od.ua/{path}",
+        "image": "https://eralux.od.ua/img/eralux/eralux-hero-ceiling.jpg",
+        "email": "eralux.info@gmail.com",
+        "telephone": ["+380968074894", "+380635703594"],
+        "areaServed": ["Odesa", "Odesa region"],
+        "priceRange": "$$",
+        "description": d["desc"],
+    }
     seo = (
         '<link rel="stylesheet" href="/css/app.css?v2">\n'
         '    <link rel="stylesheet" href="/css/eralux-update.css">\n'
         f'    <link rel="canonical" href="https://eralux.od.ua/{path}">\n'
-        '    <link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/">\n'
+        '    <link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/ru/">\n'
         '    <link rel="alternate" hreflang="uk-UA" href="https://eralux.od.ua/uk/">\n'
-        '    <link rel="alternate" hreflang="en" href="https://eralux.od.ua/en/">'
+        '    <link rel="alternate" hreflang="en" href="https://eralux.od.ua/en/">\n'
+        '    <link rel="alternate" hreflang="x-default" href="https://eralux.od.ua/uk/">\n'
+        f'    <meta property="og:type" content="website">\n'
+        f'    <meta property="og:site_name" content="ERALUX">\n'
+        f'    <meta property="og:title" content="{escape(d["title"], quote=True)}">\n'
+        f'    <meta property="og:description" content="{escape(d["desc"], quote=True)}">\n'
+        f'    <meta property="og:url" content="https://eralux.od.ua/{path}">\n'
+        '    <meta property="og:image" content="https://eralux.od.ua/img/eralux/eralux-hero-ceiling.jpg">\n'
+        f'    <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
     )
     s = s.replace('<link rel="stylesheet" href="css/app.css?v2">', seo)
     s = re.sub(r'(href|src|data-src)="(css|js|img)/', r'\1="/\2/', s)
@@ -707,12 +872,35 @@ def page(lang: str) -> str:
         (r'<h1 class="hero__title">.*?</h1>', f'<h1 class="hero__title">{d["hero_title"]}</h1>'),
         (r'<p class="hero__intro">.*?</p>', f'<p class="hero__intro">{d["hero_intro"]}</p>'),
         (r'placeholder="[^"]+" class="inputN', f'placeholder="{d["phone"]}" class="inputN'),
-        (r'<button type="submit" class="buttonN buttonN-red btn-pulse">.*?</button>', f'<button type="submit" class="buttonN buttonN-red btn-pulse">{i18n[lang]["orderMeasure"]}</button>'),
+        (r'<button type="submit" class="buttonN buttonN-red btn-pulse">.*?</button>', f'<button type="submit" class="buttonN buttonN-red btn-pulse">{i18n[lang]["orderMeasure"]}</button><p class="lead-form-status" aria-live="polite"></p>'),
         (r'<p class="calc__total"><span>195</span>.*?</p>', f'<p class="calc__total"><span>7</span> {"USD/m²" if lang == "en" else "у.е./м²"}</p>'),
         (r'<a href="#" class="calc__callback buttonN buttonN-red btn-4 to-form">.*?</a>', f'<a href="#callback" class="calc__callback buttonN buttonN-red btn-4 to-form">{d["calc"]}</a>'),
     ]
     for pattern, value in replacements:
         s = re.sub(pattern, value, s, count=1, flags=re.S)
+    s = s.replace(
+        '<form class="formN hero__form js-less">',
+        f'<form class="formN hero__form js-less" action="/api/lead" method="POST" data-lead-form data-lang="{lang}">'
+        '<input type="text" name="website" tabindex="-1" autocomplete="off" class="lead-trap" aria-hidden="true">',
+        1,
+    )
+    logo_alt = {
+        "ru": "Логотип ERALUX",
+        "uk": "Логотип ERALUX",
+        "en": "ERALUX logo",
+    }[lang]
+    s = re.sub(
+        r'<div class="eralux-logo">.*?</div>',
+        '<div class="eralux-logo">'
+        '<picture>'
+        '<source media="(max-width: 640px)" srcset="/img/logo/eralux-logo-original-280.png">'
+        f'<img class="hero-logo-image" src="/img/logo/eralux-logo-original-420.png" alt="{logo_alt}">'
+        '</picture>'
+        '</div>',
+        s,
+        count=1,
+        flags=re.S,
+    )
     price_section = prices(lang)
     start = s.find('<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_catalog">')
     nxt = s.find('<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_colors">', start)
@@ -756,14 +944,17 @@ def page(lang: str) -> str:
     )
     floating = (
         '<div class="eralux-floating floating-actions">'
-        '<span class="eralux-floating__btn floating-action floating-action--telegram is-disabled" aria-label="Telegram" data-disabled="true" title="Telegram link is not configured">'
-        '<img src="/img/icons/telegram.png" alt="" aria-hidden="true"></span>'
-        f'<a class="eralux-floating__btn floating-action floating-action--viber" href="https://viber.me/380968074894" target="_blank" rel="noopener" aria-label="{d["viber"]}">'
-        '<img src="/img/icons/viber.png" alt="" aria-hidden="true"></a>'
         f'<button class="eralux-floating__btn floating-action floating-action--top eralux-floating__top" type="button" aria-label="{d["top"]}">'
         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8l-4.6 4.6L5 12l7-7z" fill="currentColor"/></svg>'
-        '</button></div>\n'
-        '<script src="/js/eralux-update.js?v=floating-icons-1"></script>\n'
+        '</button>'
+        '<a class="eralux-floating__btn floating-action floating-action--telegram" href="tg://resolve?phone=380968074894" aria-label="Telegram">'
+        '<img src="/img/icons/telegram.png" alt="" aria-hidden="true"></a>'
+        f'<a class="eralux-floating__btn floating-action floating-action--viber" href="https://viber.me/380968074894" target="_blank" rel="noopener" aria-label="{d["viber"]}">'
+        '<img src="/img/icons/viber.png" alt="" aria-hidden="true"></a>'
+        '<a class="eralux-floating__btn floating-action floating-action--phone" href="tel:+380968074894" aria-label="Phone">'
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.8 3.5 3.1 4.8 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.4.6 3.7.6.5 0 .8.3.8.8V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.5 0 .8.3.8.8 0 1.3.2 2.5.6 3.7.1.4.1.8-.2 1.1l-2.2 2.2Z" fill="currentColor"/></svg>'
+        '</a></div>\n'
+        '<script src="/js/eralux-update.js?v=expand-cards-1"></script>\n'
     )
     return s.replace("</body>", floating + "</body>")
 
