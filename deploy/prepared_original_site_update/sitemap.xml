@@ -2,21 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eralux.od.ua/uk/</loc>
-    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.od.ua/uk/"/>
-    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/ru/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.od.ua/en/"/>
+    <loc>https://eralux.pages.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.pages.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.pages.dev/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.pages.dev/en/"/>
   </url>
   <url>
-    <loc>https://eralux.od.ua/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.od.ua/uk/"/>
-    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/ru/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.od.ua/en/"/>
+    <loc>https://eralux.pages.dev/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.pages.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.pages.dev/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.pages.dev/en/"/>
   </url>
   <url>
-    <loc>https://eralux.od.ua/en/</loc>
-    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.od.ua/uk/"/>
-    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/ru/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.od.ua/en/"/>
+    <loc>https://eralux.pages.dev/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.pages.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.pages.dev/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.pages.dev/en/"/>
+  </url>
+  <url>
+    <loc>https://eralux.pages.dev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://eralux.pages.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru-UA" href="https://eralux.pages.dev/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eralux.pages.dev/en/"/>
   </url>
 </urlset>

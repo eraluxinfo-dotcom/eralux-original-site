@@ -2,7 +2,14 @@
 (function(){
   if(window.location.search.indexOf('benefit-hover')>=0){var previewBenefit=document.querySelector('.benefit-card');if(previewBenefit){previewBenefit.classList.add('is-preview-hover');}}
   var topBtn=document.querySelector('.eralux-floating__top');
-  if(topBtn){window.addEventListener('scroll',function(){topBtn.classList.toggle('is-visible',window.scrollY>420)});topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});}
+  if(topBtn){
+    function getScrollTop(){return window.scrollY||document.documentElement.scrollTop||document.body.scrollTop||0;}
+    function updateTopButton(){topBtn.classList.toggle('is-visible',getScrollTop()>420);}
+    window.addEventListener('scroll',updateTopButton,{passive:true});
+    document.addEventListener('scroll',updateTopButton,{passive:true});
+    updateTopButton();
+    topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});document.documentElement.scrollTop=0;document.body.scrollTop=0;updateTopButton();});
+  }
   document.querySelectorAll('[data-expand-card]').forEach(function(card){
     card.addEventListener('click',function(){
       var willOpen=!card.classList.contains('is-open');

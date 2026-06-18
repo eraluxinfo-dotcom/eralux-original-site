@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eralux.od.ua/sitemap.xml
+Sitemap: https://eralux.pages.dev/sitemap.xml

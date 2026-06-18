@@ -841,8 +841,8 @@ def page(lang: str) -> str:
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "ERALUX",
-        "url": f"https://eralux.od.ua/{path}",
-        "image": "https://eralux.od.ua/img/eralux/eralux-hero-ceiling.jpg",
+        "url": f"https://eralux.pages.dev/{path}",
+        "image": "https://eralux.pages.dev/img/eralux/eralux-hero-ceiling.jpg",
         "email": "eralux.info@gmail.com",
         "telephone": ["+380968074894", "+380635703594"],
         "areaServed": ["Odesa", "Odesa region"],
@@ -852,17 +852,17 @@ def page(lang: str) -> str:
     seo = (
         '<link rel="stylesheet" href="/css/app.css?v2">\n'
         '    <link rel="stylesheet" href="/css/eralux-update.css?v=align-text-1">\n'
-        f'    <link rel="canonical" href="https://eralux.od.ua/{path}">\n'
-        '    <link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/ru/">\n'
-        '    <link rel="alternate" hreflang="uk-UA" href="https://eralux.od.ua/uk/">\n'
-        '    <link rel="alternate" hreflang="en" href="https://eralux.od.ua/en/">\n'
-        '    <link rel="alternate" hreflang="x-default" href="https://eralux.od.ua/uk/">\n'
+        f'    <link rel="canonical" href="https://eralux.pages.dev/{path}">\n'
+        '    <link rel="alternate" hreflang="ru-UA" href="https://eralux.pages.dev/ru/">\n'
+        '    <link rel="alternate" hreflang="uk-UA" href="https://eralux.pages.dev/uk/">\n'
+        '    <link rel="alternate" hreflang="en" href="https://eralux.pages.dev/en/">\n'
+        '    <link rel="alternate" hreflang="x-default" href="https://eralux.pages.dev/uk/">\n'
         f'    <meta property="og:type" content="website">\n'
         f'    <meta property="og:site_name" content="ERALUX">\n'
         f'    <meta property="og:title" content="{escape(d["title"], quote=True)}">\n'
         f'    <meta property="og:description" content="{escape(d["desc"], quote=True)}">\n'
-        f'    <meta property="og:url" content="https://eralux.od.ua/{path}">\n'
-        '    <meta property="og:image" content="https://eralux.od.ua/img/eralux/eralux-hero-ceiling.jpg">\n'
+        f'    <meta property="og:url" content="https://eralux.pages.dev/{path}">\n'
+        '    <meta property="og:image" content="https://eralux.pages.dev/img/eralux/eralux-hero-ceiling.jpg">\n'
         '    <meta name="google-site-verification" content="PLqSUexgDnCr7iKdnOhkQnnTcrPpUOend03cLJQK1lA">\n'
         '    <meta name="google-site-verification" content="f-IQOGQHTkJQ1HrfGQmwMwRLY1H2sToqqg50KmNlcFw">\n'
         f'    <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
@@ -982,6 +982,14 @@ def page(lang: str) -> str:
     s = s.replace(
         '<img class="logo__icon" src="/img/logo1.png" alt="логотип Твой Стиль">',
         '<img class="logo__icon" src="/img/logo/eralux-logo-original-280.png" alt="ERALUX">',
+    )
+    s = s.replace(
+        '<a href="javascript:void(0);" class="logo logo_white footer__logo">',
+        '<a href="/" class="logo logo_white footer__logo" aria-label="ERALUX">',
+    )
+    s = s.replace(
+        '<img class="work-modal__image" src="" alt="">',
+        '<img class="work-modal__image" src="/img/eralux/eralux-hero-ceiling.jpg" alt="ERALUX ceiling example">',
     )
     floating = (
         '<div class="eralux-floating floating-actions">'

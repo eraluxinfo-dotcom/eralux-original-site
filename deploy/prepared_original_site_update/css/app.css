@@ -948,92 +948,6 @@
  left:0;
  overflow:hidden
 }
-@font-face {
- font-family:PTRoubleSans;
- font-display:swap;
- src:url(../fonts/subset-PTRoubleSans.woff2) format("woff2"),
- url(../fonts/subset-PTRoubleSans.woff) format("woff");
- font-weight:400;
- font-style:normal
-}
-@font-face {
- font-family:Futura PT;
- font-display:swap;
- src:url(../fonts/Futura-PT-Light.woff2) format("woff2"),
- url(../fonts/Futura-PT-Light.woff) format("woff");
- font-weight:300;
- font-style:normal;
- font-stretch:normal
-}
-@font-face {
- font-family:Futura PT;
- font-display:swap;
- src:url(../fonts/Futura-PT-Book.woff2) format("woff2"),
- url(../fonts/Futura-PT-Book.woff) format("woff");
- font-weight:400;
- font-style:normal;
- font-stretch:normal
-}
-@font-face {
- font-family:Futura PT;
- font-display:swap;
- src:url(../fonts/FuturaPT-Medium.woff) format("woff");
- font-weight:500;
- font-style:normal;
- font-stretch:normal
-}
-@font-face {
- font-family:Playfair Display;
- font-display:swap;
- src:url(../fonts/subset-PlayfairDisplay-Italic.woff2) format("woff2"),
- url(../fonts/subset-PlayfairDisplay-Italic.woff) format("woff");
- font-weight:400;
- font-style:italic
-}
-@font-face {
- font-family:Playfair Display;
- font-display:swap;
- src:url(../fonts/subset-PlayfairDisplay-Regular.woff2) format("woff2"),
- url(../fonts/subset-PlayfairDisplay-Regular.woff) format("woff");
- font-weight:400;
- font-style:normal
-}
-@font-face {
- font-family:Helvetica Neue;
- font-display:swap;
- src:url(../fonts/subset-HelveticaNeue-Bold.woff) format("woff");
- font-weight:700;
- font-style:normal
-}
-@font-face {
- font-family:Helvetica Neue;
- font-display:swap;
- src:url(../fonts/subset-HelveticaNeue-Medium.woff) format("woff");
- font-weight:500;
- font-style:normal
-}
-@font-face {
- font-family:Helvetica Neue;
- font-display:swap;
- src:url(../fonts/subset-HelveticaNeue-Regular.woff) format("woff");
- font-weight:400;
- font-style:normal
-}
-@font-face {
- font-family:Helvetica Neue;
- font-display:swap;
- src:url(../fonts/subset-HelveticaNeue-Light.woff) format("woff");
- font-weight:300;
- font-style:normal
-}
-@font-face {
- font-family:"PTRoubleSerif";
- font-display:swap;
- src:url(../fonts/PTRoubleSerif.woff) format("woff");
- font-weight:300;
- font-style:normal;
- font-stretch:normal
-}
 .rouble {
  font-family:"PTRoubleSerif"
 }
@@ -4229,7 +4143,7 @@ input {
  top:0;
  width:.625rem;
  height:1rem;
- background-image:url(../img/phone.svg);
+ background-image:none;
  background-size:contain;
  background-repeat:no-repeat
 }
@@ -4456,7 +4370,7 @@ input {
  background-image:url(/img/gui/telegram_blue.svg)
 }
 .feedback__item_phone .feedback__icon {
- background-image:url(../img/gui/phone.svg);
+ background-image:none;
  background-size:14px 19px;
  width:12px
 }
@@ -21012,7 +20926,7 @@ main.page {
 }
 @media screen and (min-width:48rem) {
  .webp .hero__content:before {
-  content:url(../img/banner-girl.webp)
+  content:""
  }
 }
 .webp .texture_sand:before {
