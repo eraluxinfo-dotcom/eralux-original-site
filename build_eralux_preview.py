@@ -473,26 +473,48 @@ icon_paths = {
 
 
 def gallery(lang: str) -> str:
-    d = T[lang]
-    buttons = "".join(
-        f'<button type="button" data-filter="{key}" class="{"is-active" if key == "all" else ""}">{label}</button>'
-        for key, label in zip(filter_keys, d["filters"])
-    )
-    cards = []
-    for cat, title, desc, img in d["cards"]:
-        cards.append(
-            f'<a href="/{img}" data-fancybox class="case b-card portfolio__item portfolio__item_slide swiper-slide" data-cat="{cat}">'
-            f'<img data-src="/{img}" alt="{title}" class="case__img lazyloaded" src="/{img}">'
-            f'<p class="card-title case__title">{title}</p><hr class="line line_small case__line">'
-            f'<div class="case__totals"><p class="case__info text">{d["details"]}</p></div>'
-            f'<div class="case__overlay"><h3>{title}</h3><p>{desc}</p>'
-            f'<div class="case__overlay-actions"><a href="#callback">{i18n[lang]["learnPrice"]}</a>'
-            f'<a href="https://viber.me/380968074894">{d["viber"]}</a></div></div></a>'
+    data = work_content[lang]
+    categories = []
+    for category, projects in data["categories"]:
+        cards = []
+        for title, description, image in projects[:4]:
+            metadata = " | ".join(data["meta"])
+            cards.append(
+                f'<button class="work-photo-card" type="button" data-work-image="/{image}" '
+                f'data-work-title="{escape(title, quote=True)}" data-work-description="{escape(description, quote=True)}" '
+                f'data-work-meta="{escape(metadata, quote=True)}">'
+                f'<span class="work-photo-card__media"><img src="/{image}" alt="{escape(title, quote=True)}" loading="lazy">'
+                f'<span class="work-photo-card__overlay">{data["details"]}</span></span>'
+                f'<span class="work-photo-card__body"><strong>{title}</strong><small>{description}</small></span>'
+                '</button>'
+            )
+        categories.append(
+            f'<section class="work-category"><h3>{category}</h3><div class="work-grid">{"".join(cards)}</div></section>'
         )
     return (
-        f'<div class="portfolio__filters">{buttons}</div>'
-        '<div class="portfolio__wrapper"><div class="portfolio__content swiper-container">'
-        f'<div class="portfolio__slider swiper-wrapper">{"".join(cards)}</div></div></div>'
+        '<section class="eralux-work-gallery eralux-section" id="gallery"><div class="eralux-container">'
+        f'<div class="eralux-section-head"><h2>{data["title"]}</h2><p>{data["subtitle"]}</p></div>'
+        f'{"".join(categories)}</div></section>'
+        '<div class="work-modal" aria-hidden="true"><div class="work-modal__backdrop" data-work-close></div>'
+        '<div class="work-modal__dialog" role="dialog" aria-modal="true">'
+        f'<button class="work-modal__close" type="button" data-work-close aria-label="{data["close"]}">×</button>'
+        '<img class="work-modal__image" src="" alt=""><div class="work-modal__body"><h3></h3><p class="work-modal__description"></p><p class="work-modal__meta"></p>'
+        f'<div class="work-modal__actions"><a href="#callback">{data["price"]}</a><a href="https://viber.me/380968074894">{data["viber"]}</a></div>'
+        '</div></div></div>'
+    )
+
+
+def prices(lang: str) -> str:
+    data = price_content[lang]
+    cards = "".join(
+        f'<article class="price-card"><h3>{title}</h3><strong class="price-value">{value}</strong><p>{hint}</p></article>'
+        for title, value, hint in data["items"]
+    )
+    return (
+        '<section class="prices-section eralux-section" id="prices"><div class="eralux-container">'
+        f'<div class="eralux-section-head"><h2>{data["title"]}</h2><p>{data["subtitle"]}</p></div>'
+        f'<div class="price-grid">{cards}</div><p class="price-note">{data["note"]}</p>'
+        '</div></section>'
     )
 
 
@@ -618,13 +640,13 @@ def page(lang: str) -> str:
     ]
     for pattern, value in replacements:
         s = re.sub(pattern, value, s, count=1, flags=re.S)
-    price_section = f'<section class="wrapper section"><h2 class="title-dec">{d["price_title"]}</h2><p>{"<br>".join(d["prices"])}</p></section>'
+    price_section = prices(lang)
     start = s.find('<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_catalog">')
-    nxt = s.find('<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_portfolio"', start)
+    nxt = s.find('<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_colors">', start)
     if start != -1 and nxt != -1:
         s = (
             s[:start]
-            + f'<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_catalog"><h2 class="title-dec">{d["gallery_title"]}</h2>{gallery(lang)}</div>\n\t\t{price_section}\n\t\t'
+            + f'{gallery(lang)}\n\t\t{price_section}\n\t\t'
             + s[nxt:]
         )
     palette_start = s.find('<div class="portfolio portfolioN portfolio_main portfolio_ceilings new_colors">')
@@ -636,7 +658,7 @@ def page(lang: str) -> str:
     if benefits_start != -1 and benefits_end != -1:
         s = s[:benefits_start] + benefits(lang) + "\n\t\t" + s[benefits_end:]
     pref_start = s.find('<div class="other section wrapper new-pref">')
-    pref_end = s.find('<section class="eralux-about', pref_start)
+    pref_end = s.find('<div class="seo-block seo-block_main">', pref_start)
     if pref_start != -1 and pref_end != -1:
         s = s[:pref_start] + benefits(lang) + "\n\t\t" + s[pref_end:]
     seo_start = s.find('<div class="seo-block seo-block_main">')

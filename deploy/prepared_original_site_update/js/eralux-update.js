@@ -38,4 +38,25 @@
     paletteModal.querySelectorAll('[data-palette-close]').forEach(function(btn){btn.addEventListener('click',closePalette);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePalette();}});
   }
+  var workModal=document.querySelector('.work-modal');
+  if(workModal){
+    var workImage=workModal.querySelector('.work-modal__image');
+    var workTitle=workModal.querySelector('h3');
+    var workDescription=workModal.querySelector('.work-modal__description');
+    var workMeta=workModal.querySelector('.work-modal__meta');
+    function closeWork(){workModal.setAttribute('aria-hidden','true');document.body.classList.remove('work-modal-open');}
+    document.addEventListener('click',function(e){
+      var card=e.target.closest('.work-photo-card');
+      if(!card){return;}
+      workImage.src=card.getAttribute('data-work-image')||'';
+      workImage.alt=card.getAttribute('data-work-title')||'';
+      workTitle.textContent=card.getAttribute('data-work-title')||'';
+      workDescription.textContent=card.getAttribute('data-work-description')||'';
+      workMeta.textContent=card.getAttribute('data-work-meta')||'';
+      workModal.setAttribute('aria-hidden','false');
+      document.body.classList.add('work-modal-open');
+    });
+    workModal.querySelectorAll('[data-work-close]').forEach(function(btn){btn.addEventListener('click',closeWork);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeWork();}});
+  }
 })();
