@@ -851,7 +851,7 @@ def page(lang: str) -> str:
     }
     seo = (
         '<link rel="stylesheet" href="/css/app.css?v2">\n'
-        '    <link rel="stylesheet" href="/css/eralux-update.css">\n'
+        '    <link rel="stylesheet" href="/css/eralux-update.css?v=align-text-1">\n'
         f'    <link rel="canonical" href="https://eralux.od.ua/{path}">\n'
         '    <link rel="alternate" hreflang="ru-UA" href="https://eralux.od.ua/ru/">\n'
         '    <link rel="alternate" hreflang="uk-UA" href="https://eralux.od.ua/uk/">\n'

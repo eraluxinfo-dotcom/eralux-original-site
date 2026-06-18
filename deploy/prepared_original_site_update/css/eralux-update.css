@@ -190,17 +190,18 @@ h1,h2,h3,h4{color:var(--text-heading);font-family:Manrope,Inter,Arial,sans-serif
 .buttonN-red:hover,.btn-4:hover,.form__button:hover{background:var(--accent-hover)!important;border-color:var(--accent-hover)!important;color:var(--white)!important}
 .prices-section{background:linear-gradient(180deg,var(--surface),var(--bg-soft))}
 .price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.price-card{min-height:190px;padding:24px;border-radius:18px;background:var(--surface);border:1px solid var(--border);box-shadow:0 14px 36px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.price-card{min-height:190px;padding:26px 28px;border-radius:18px;background:var(--surface);border:1px solid var(--border);box-shadow:0 14px 36px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;display:flex;flex-direction:column;align-items:stretch}
 .price-card:hover{transform:translateY(-6px);border-color:rgba(242,161,0,.42);box-shadow:0 22px 46px rgba(15,23,42,.13)}
-.price-card h3{margin:0 0 12px;font-size:20px;line-height:1.25}
-.price-value{display:block;margin-bottom:10px;color:#b86f00;font-size:25px;line-height:1.15;font-weight:850}
-.price-card p{margin:0;color:var(--text-soft);font-size:14px;line-height:1.5}
+.price-card h3{margin:0 0 12px;font-size:20px;line-height:1.25;text-align:center}
+.price-value{display:block;margin-bottom:14px;color:#b86f00;font-size:25px;line-height:1.15;font-weight:850;text-align:center}
+.price-card p{max-width:34em;margin:0 auto;color:var(--text-soft);font-size:14px;line-height:1.62;text-align:left!important;text-wrap:pretty;overflow-wrap:normal}
 .benefit-card,.price-card{font:inherit;text-align:left;cursor:pointer}
 .benefit-card p,.price-card p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .benefit-card.is-open,.price-card.is-open{transform:scale(1.035)!important;border-color:rgba(242,161,0,.48)!important;box-shadow:0 26px 70px rgba(15,23,42,.18)!important;z-index:4}
 .benefit-card.is-open{grid-column:span 2;min-height:310px}
-.price-card.is-open{grid-column:span 2;min-height:280px}
+.price-card.is-open{grid-column:span 2;min-height:280px;padding-left:34px;padding-right:34px}
 .benefit-card.is-open p,.price-card.is-open p{display:block;overflow:visible;-webkit-line-clamp:unset}
+.price-card.is-open p{max-width:48em}
 .benefit-card:focus-visible,.price-card:focus-visible{outline:3px solid rgba(242,161,0,.45);outline-offset:3px}
 @media(max-width:980px){.benefit-card.is-open,.price-card.is-open{grid-column:span 2}}
 @media(max-width:640px){.benefit-card.is-open,.price-card.is-open{grid-column:span 1;transform:scale(1.01)!important}}
