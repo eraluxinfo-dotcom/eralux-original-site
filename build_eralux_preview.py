@@ -864,6 +864,7 @@ def page(lang: str) -> str:
         f'    <meta property="og:url" content="https://eralux.od.ua/{path}">\n'
         '    <meta property="og:image" content="https://eralux.od.ua/img/eralux/eralux-hero-ceiling.jpg">\n'
         '    <meta name="google-site-verification" content="PLqSUexgDnCr7iKdnOhkQnnTcrPpUOend03cLJQK1lA">\n'
+        '    <meta name="google-site-verification" content="f-IQOGQHTkJQ1HrfGQmwMwRLY1H2sToqqg50KmNlcFw">\n'
         f'    <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
     )
     s = s.replace('<link rel="stylesheet" href="css/app.css?v2">', seo)
