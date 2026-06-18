@@ -757,9 +757,9 @@ def page(lang: str) -> str:
     floating = (
         '<div class="eralux-floating floating-actions">'
         '<span class="eralux-floating__btn floating-action floating-action--telegram is-disabled" aria-label="Telegram" data-disabled="true" title="Telegram link is not configured">'
-        '<img src="/img/icons/telegram.svg" alt="" aria-hidden="true"></span>'
+        '<img src="/img/icons/telegram.png" alt="" aria-hidden="true"></span>'
         f'<a class="eralux-floating__btn floating-action floating-action--viber" href="https://viber.me/380968074894" target="_blank" rel="noopener" aria-label="{d["viber"]}">'
-        '<img src="/img/icons/viber.svg" alt="" aria-hidden="true"></a>'
+        '<img src="/img/icons/viber.png" alt="" aria-hidden="true"></a>'
         f'<button class="eralux-floating__btn floating-action floating-action--top eralux-floating__top" type="button" aria-label="{d["top"]}">'
         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8l-4.6 4.6L5 12l7-7z" fill="currentColor"/></svg>'
         '</button></div>\n'

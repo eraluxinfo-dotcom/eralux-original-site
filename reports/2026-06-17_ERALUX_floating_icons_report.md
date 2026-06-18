@@ -3,6 +3,8 @@
 Сделано:
 - текстовые заглушки TG и VB удалены;
 - добавлены локальные SVG-иконки Telegram и Viber;
+- предоставленные пользователем AVIF-иконки обработаны и подключены как оптимизированные PNG 128×128;
+- у Telegram удалён встроенный шахматный фон без повреждения белого самолётика;
 - hotlink не используется;
 - Viber ведёт на https://viber.me/380968074894;
 - Telegram отображается как отключённая preview-кнопка, потому что реальная ссылка не предоставлена;
@@ -15,6 +17,8 @@
 Файлы:
 - deploy/prepared_original_site_update/img/icons/telegram.svg
 - deploy/prepared_original_site_update/img/icons/viber.svg
+- deploy/prepared_original_site_update/img/icons/telegram.png
+- deploy/prepared_original_site_update/img/icons/viber.png
 - build_eralux_preview.py
 - deploy/prepared_original_site_update/css/eralux-update.css
 - deploy/prepared_original_site_update/js/eralux-update.js
