@@ -245,9 +245,9 @@ h1,h2,h3,h4{color:var(--text-heading);font-family:Manrope,Inter,Arial,sans-serif
 .footer__row_dark{min-height:122px!important;padding:28px 0 30px!important;display:flex!important;align-items:center!important}
 .footer__copyright{min-height:64px!important;align-items:center!important;gap:28px!important}
 .footer__company{align-items:center!important;margin-bottom:0!important}
-.footer__logo{height:64px!important;align-items:center!important;overflow:visible!important}
-.footer__logo .logo__icon{height:56px!important;width:auto!important;max-height:none!important;object-fit:contain!important;margin-right:1rem!important}
-.footer__logo:after{height:56px!important;top:50%!important;transform:translateY(-50%)!important}
+.footer__logo{height:52px!important;align-items:center!important;overflow:visible!important}
+.footer__logo .logo__icon{height:38px!important;width:auto!important;max-height:none!important;object-fit:contain!important;margin-right:1rem!important}
+.footer__logo:after{height:44px!important;top:50%!important;transform:translateY(-50%)!important}
 .footer__year{margin:0!important;color:#fff!important;font-size:16px!important;line-height:1.45!important;font-weight:600!important;text-align:center!important}
 .footer__dev{margin:0!important;color:#fff!important;font-size:19px!important;line-height:1.35!important;font-weight:800!important;gap:30px!important}
 .footer__dev a{font-size:19px!important;line-height:1.35!important;color:#fff!important;font-weight:800!important;white-space:nowrap!important}
