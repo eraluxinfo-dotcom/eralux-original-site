@@ -1,4 +1,5 @@
 from pathlib import Path
+import colorsys
 import json
 import re
 from html import escape
@@ -393,6 +394,65 @@ for source_number, source_image, visible_numbers in palette_sources:
             }
         )
 
+palette_group_labels = {
+    "ru": [
+        ("light", "Белые и светлые"),
+        ("neutral", "Бежевые и нейтральные"),
+        ("yellow", "Жёлтые и золотистые"),
+        ("green", "Зелёные"),
+        ("blue", "Синие и бирюзовые"),
+        ("violet", "Бордовые и фиолетовые"),
+        ("dark", "Серые и тёмные"),
+    ],
+    "uk": [
+        ("light", "Білі та світлі"),
+        ("neutral", "Бежеві та нейтральні"),
+        ("yellow", "Жовті та золотисті"),
+        ("green", "Зелені"),
+        ("blue", "Сині та бірюзові"),
+        ("violet", "Бордові та фіолетові"),
+        ("dark", "Сірі та темні"),
+    ],
+    "en": [
+        ("light", "White and light"),
+        ("neutral", "Beige and neutral"),
+        ("yellow", "Yellow and gold"),
+        ("green", "Green shades"),
+        ("blue", "Blue and turquoise"),
+        ("violet", "Burgundy and violet"),
+        ("dark", "Gray and dark"),
+    ],
+}
+
+
+def palette_rgb(item: dict[str, str]) -> tuple[int, int, int]:
+    value = item["base"].lstrip("#")
+    return tuple(int(value[index : index + 2], 16) for index in (0, 2, 4))
+
+
+def palette_group(item: dict[str, str]) -> str:
+    rgb = palette_rgb(item)
+    hue, saturation, value = colorsys.rgb_to_hsv(*(channel / 255 for channel in rgb))
+    hue *= 360
+    if saturation < 0.18:
+        return "light" if value >= 0.62 else "dark"
+    if 20 <= hue < 40 and saturation < 0.5:
+        return "neutral"
+    if 20 <= hue < 75:
+        return "yellow"
+    if 75 <= hue < 175:
+        return "green"
+    if 175 <= hue < 255:
+        return "blue"
+    if hue >= 255 or hue < 20:
+        return "violet"
+    return "neutral"
+
+
+def palette_brightness(item: dict[str, str]) -> float:
+    red, green, blue = palette_rgb(item)
+    return 0.2126 * red + 0.7152 * green + 0.0722 * blue
+
 benefits_content = {
     "ru": {
         "title": "Что вы получаете с ERALUX",
@@ -520,7 +580,7 @@ def prices(lang: str) -> str:
 
 def palette(lang: str) -> str:
     title, subtitle, disclaimer = palette_meta[lang]
-    cards = []
+    cards_by_group = {group_key: [] for group_key, _ in palette_group_labels[lang]}
     descriptions = palette_descriptions[lang]
     measure_label = {"ru": "Заказать замер", "uk": "Замовити замір", "en": "Request a measurement"}[lang]
     close_label = {"ru": "Закрыть", "uk": "Закрити", "en": "Close"}[lang]
@@ -533,7 +593,7 @@ def palette(lang: str) -> str:
         finish = item["finish"]
         finish_label = {"ru": "глянец" if finish == "glossy" else "мат", "uk": "глянець" if finish == "glossy" else "мат", "en": "glossy" if finish == "glossy" else "matte"}[lang]
         style = f"--swatch-base:{base};--swatch-shadow:{shadow};--swatch-highlight:{highlight};"
-        cards.append(
+        card_html = (
             f'<article class="eralux-palette-card palette-card--{finish}" style="{style}" '
             f'data-palette-number="№ {number}" data-palette-description="{escape(description, quote=True)}" '
             f'data-palette-base="{base}" data-palette-shadow="{shadow}" data-palette-highlight="{highlight}" data-palette-finish="{finish}" data-palette-finish-label="{finish_label}">'
@@ -547,10 +607,23 @@ def palette(lang: str) -> str:
             "</div>"
             "</article>"
         )
+        cards_by_group[palette_group(item)].append((palette_brightness(item), card_html))
+    groups = []
+    for group_key, group_title in palette_group_labels[lang]:
+        group_cards = cards_by_group[group_key]
+        if not group_cards:
+            continue
+        group_cards.sort(key=lambda card: card[0], reverse=True)
+        groups.append(
+            f'<section class="palette-group" data-palette-group="{group_key}">'
+            f'<h3 class="palette-group__title">{group_title}</h3>'
+            f'<div class="palette-group__grid">{"".join(card[1] for card in group_cards)}</div>'
+            '</section>'
+        )
     return (
         '<section class="eralux-palette wrapper section" id="palette">'
         f'<div class="eralux-palette__head"><h2 class="title-dec">{title}</h2><p>{subtitle}</p></div>'
-        f'<div class="eralux-palette__grid">{"".join(cards)}</div>'
+        f'<div class="eralux-palette__groups">{"".join(groups)}</div>'
         f'<p class="eralux-palette__note">{disclaimer}</p>'
         f'<div class="eralux-palette__actions"><a href="#callback">{measure_label}</a><a href="https://viber.me/380968074894">Viber</a></div>'
         '<div class="palette-modal" aria-hidden="true">'
