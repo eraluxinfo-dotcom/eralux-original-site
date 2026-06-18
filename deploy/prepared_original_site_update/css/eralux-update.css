@@ -183,6 +183,8 @@ h1,h2,h3,h4{color:var(--text-heading);font-family:Manrope,Inter,Arial,sans-serif
 .hero__title{max-width:70%!important;margin-bottom:24px!important;font-family:Manrope,Inter,Arial,sans-serif!important;font-size:clamp(38px,4.4vw,52px)!important;line-height:1.1!important}
 .hero__overtitle,.hero__intro,.hero__form{max-width:62%!important}
 .hero__intro{margin-top:0!important}
+html[lang="en"] .hero__title{max-width:64%!important;margin-bottom:34px!important;font-size:clamp(34px,3.7vw,48px)!important;line-height:1.16!important}
+html[lang="en"] .hero__intro{clear:both!important;margin-top:0!important;line-height:1.45!important}
 .eralux-logo{position:absolute!important;right:18px!important;top:50%!important;width:min(280px,27vw)!important;transform:translateY(-50%)!important;pointer-events:none!important}
 .eralux-logo picture,.hero-logo-image{display:block!important;width:100%!important;height:auto!important}
 .hero-logo-image{aspect-ratio:1/1!important;object-fit:contain!important;filter:drop-shadow(0 20px 50px rgba(0,0,0,.28))!important}
@@ -240,14 +242,16 @@ h1,h2,h3,h4{color:var(--text-heading);font-family:Manrope,Inter,Arial,sans-serif
 .eralux-palette,.benefits-section{color:var(--text-main)!important}
 .eralux-palette__head h2,.benefit-card h3,.palette-number{color:var(--text-heading)!important}
 .eralux-palette__head p,.benefit-card p,.palette-description{color:var(--text-soft)!important}
+.footer,footer,.eralux-footer,.footer__inner,.eralux-footer__inner,.footer-logo,.eralux-footer__logo,.footer__row,.footer__row_dark,.footer__copyright,.footer__company,.footer__logo{overflow:visible!important}
+.footer,footer,.eralux-footer{min-height:120px!important;padding:28px 0!important}
 .footer{background:var(--dark)!important;color:rgba(255,255,255,.84)!important}
 .footer h3,.footer h4{color:#fff!important}.footer a{color:rgba(255,255,255,.82)!important}.footer a:hover{color:var(--accent)!important}
-.footer__row_dark{min-height:190px!important;padding:48px 0 52px!important;display:flex!important;align-items:center!important}
-.footer__copyright{min-height:96px!important;align-items:center!important;gap:56px!important}
-.footer__company{align-items:center!important;margin-bottom:0!important}
-.footer__logo{height:96px!important;align-items:center!important;overflow:visible!important}
-.footer__logo .logo__icon{height:76px!important;width:auto!important;max-height:none!important;object-fit:contain!important;margin-right:1.5rem!important}
-.footer__logo:after{height:86px!important;top:50%!important;transform:translateY(-50%)!important}
+.footer__row_dark{min-height:132px!important;padding:28px 0!important;display:flex!important;align-items:center!important}
+.footer__copyright{min-height:76px!important;align-items:center!important;gap:48px!important}
+.footer__company{align-items:center!important;margin-bottom:0!important;min-height:76px!important}
+.footer__logo{height:auto!important;min-height:76px!important;align-items:center!important;overflow:visible!important}
+.footer-logo img,.eralux-footer__logo img,footer img,.footer__logo .logo__icon{display:block!important;width:auto!important;max-width:150px!important;max-height:72px!important;height:auto!important;object-fit:contain!important;object-position:center!important;margin-right:1.5rem!important}
+.footer__logo:after{height:76px!important;top:50%!important;transform:translateY(-50%)!important}
 .footer__year{margin:0!important;color:#fff!important;font-size:28px!important;line-height:1.42!important;font-weight:750!important;text-align:center!important}
 .footer__dev{margin:0!important;color:#fff!important;font-size:30px!important;line-height:1.32!important;font-weight:900!important;gap:56px!important}
 .footer__dev a{font-size:30px!important;line-height:1.32!important;color:#fff!important;font-weight:900!important;white-space:nowrap!important}

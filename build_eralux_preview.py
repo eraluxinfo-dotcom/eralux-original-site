@@ -863,6 +863,7 @@ def page(lang: str) -> str:
         f'    <meta property="og:description" content="{escape(d["desc"], quote=True)}">\n'
         f'    <meta property="og:url" content="https://eralux.od.ua/{path}">\n'
         '    <meta property="og:image" content="https://eralux.od.ua/img/eralux/eralux-hero-ceiling.jpg">\n'
+        '    <meta name="google-site-verification" content="PLqSUexgDnCr7iKdnOhkQnnTcrPpUOend03cLJQK1lA">\n'
         f'    <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
     )
     s = s.replace('<link rel="stylesheet" href="css/app.css?v2">', seo)
@@ -878,6 +879,32 @@ def page(lang: str) -> str:
     ]
     for pattern, value in replacements:
         s = re.sub(pattern, value, s, count=1, flags=re.S)
+    calc_labels = {
+        "uk": {
+            "Калькулятор": "Калькулятор",
+            "Расчёт стоимости натяжного потолка.": "Розрахунок вартості натяжної стелі.",
+            "Для точного расчёта необходим замер!": "Для точного розрахунку потрібен замір!",
+            "Площадь помещения": "Площа приміщення",
+            "Периметр помещения": "Периметр приміщення",
+            "Количество светильников": "Кількість світильників",
+            "Цена с установкой": "Ціна з установкою",
+        },
+        "en": {
+            "Калькулятор": "Calculator",
+            "Расчёт стоимости натяжного потолка.": "Stretch ceiling cost estimate.",
+            "Для точного расчёта необходим замер!": "A site measurement is required for an exact price!",
+            "Площадь помещения": "Room area",
+            "Периметр помещения": "Room perimeter",
+            "Количество светильников": "Number of spotlights",
+            "Цена с установкой": "Price with installation",
+        },
+    }
+    if lang in calc_labels:
+        for source, target in calc_labels[lang].items():
+            s = s.replace(source, target)
+        if lang == "en":
+            s = s.replace("(м<sup>2</sup>)", "(m<sup>2</sup>)")
+            s = s.replace("(м)</p>", "(m)</p>")
     s = s.replace(
         '<form class="formN hero__form js-less">',
         f'<form class="formN hero__form js-less" action="/api/lead" method="POST" data-lead-form data-lang="{lang}">'
@@ -941,6 +968,19 @@ def page(lang: str) -> str:
         "</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"main\">",
         switch + "</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"main\">",
         1,
+    )
+    favicon_links = (
+        '<link rel="icon" href="/favicon.ico?v=eralux-1" sizes="any">\n'
+        '    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=eralux-1">\n'
+        '    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=eralux-1">\n'
+        '    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=eralux-1">\n'
+        '    <link rel="manifest" href="/site.webmanifest">\n'
+        '    <meta name="theme-color" content="#151922">'
+    )
+    s = s.replace('<link rel="icon" href="/favicon.ico" type="image/x-icon">', favicon_links)
+    s = s.replace(
+        '<img class="logo__icon" src="/img/logo1.png" alt="логотип Твой Стиль">',
+        '<img class="logo__icon" src="/img/logo/eralux-logo-original-280.png" alt="ERALUX">',
     )
     floating = (
         '<div class="eralux-floating floating-actions">'
