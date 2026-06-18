@@ -932,8 +932,8 @@ def page(lang: str) -> str:
         s = s[:footer_offer_start] + cta(lang) + "\n\t\t" + s[footer_start:]
     switch = (
         '<nav class="lang-switcher" aria-label="Language">'
-        f'<a class="{"is-active" if lang == "ru" else ""}" href="/">RU</a>'
         f'<a class="{"is-active" if lang == "uk" else ""}" href="/uk/">UA</a>'
+        f'<a class="{"is-active" if lang == "ru" else ""}" href="/">RU</a>'
         f'<a class="{"is-active" if lang == "en" else ""}" href="/en/">EN</a>'
         "</nav>"
     )
